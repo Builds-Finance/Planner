@@ -1,30 +1,66 @@
-.rules {
-  padding: 50px;
+.rules-container {
   max-width: 900px;
-  margin: auto;
+  margin: 50px auto;
+  padding: 40px;
+  background: #020617;
+  border-radius: 12px;
 }
 
-.rules h1 {
-  color: #38bdf8;
+.rules-container h1 {
   text-align: center;
+  color: #38bdf8;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  text-align: center;
+  opacity: 0.8;
   margin-bottom: 40px;
 }
 
-.rule-card {
-  background: #020617;
-  padding: 25px;
-  margin-bottom: 20px;
-  border-radius: 10px;
+section {
+  margin-bottom: 35px;
+}
+
+section h2 {
   border-left: 4px solid #38bdf8;
-}
-
-.rule-card h3 {
-  margin: 0 0 10px;
+  padding-left: 12px;
   color: #e5e7eb;
+  margin-bottom: 12px;
 }
 
-.rule-card p {
-  margin: 0;
-  color: #cbd5f5;
+section ul {
+  padding-left: 20px;
+}
+
+section li {
+  margin-bottom: 8px;
   line-height: 1.6;
+  color: #cbd5f5;
+}
+
+.mantra {
+  background: #1f1a10;
+  border-left: 4px solid #ffb74d;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+.mantra h2 {
+  border: none;
+  padding-left: 0;
+  color: #ffcc80;
+}
+
+.mantra p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #fff3e0;
+}
+
+.footer-note {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  opacity: 0.7;
 }
