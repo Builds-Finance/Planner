@@ -1,0 +1,30 @@
+.rules {
+  padding: 50px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.rules h1 {
+  color: #38bdf8;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.rule-card {
+  background: #020617;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #38bdf8;
+}
+
+.rule-card h3 {
+  margin: 0 0 10px;
+  color: #e5e7eb;
+}
+
+.rule-card p {
+  margin: 0;
+  color: #cbd5f5;
+  line-height: 1.6;
+}
