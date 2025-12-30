@@ -1,15 +1,15 @@
-/* ===== LAYOUT ===== */
-.rules-layout {
+/* ===== PAGE LAYOUT ===== */
+.rules-wrapper {
   display: grid;
-  grid-template-columns: 230px 1fr;
+  grid-template-columns: 240px 1fr;
   gap: 30px;
-  max-width: 1150px;
+  max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
-/* ===== LEFT NAV ===== */
-.rules-nav {
+/* ===== SIDEBAR ===== */
+.rules-sidebar {
   position: sticky;
   top: 90px;
   background: #020617;
@@ -18,12 +18,12 @@
   height: fit-content;
 }
 
-.rules-nav h3 {
-  margin-top: 0;
+.rules-sidebar h3 {
   color: #38bdf8;
+  margin-top: 0;
 }
 
-.rules-nav a {
+.rules-sidebar a {
   display: block;
   color: #cbd5f5;
   text-decoration: none;
@@ -31,7 +31,7 @@
   font-size: 0.95rem;
 }
 
-.rules-nav a:hover {
+.rules-sidebar a:hover {
   color: #38bdf8;
 }
 
@@ -42,58 +42,60 @@
   border-radius: 12px;
 }
 
-.rules-header {
+.page-title {
   text-align: center;
-  margin-bottom: 30px;
-}
-
-.rules-header h1 {
   color: #38bdf8;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
-/* ===== RULE BLOCKS ===== */
-.rule-block {
-  margin-bottom: 16px;
-  border-radius: 8px;
+.subtitle {
+  text-align: center;
+  margin-bottom: 35px;
+  opacity: 0.8;
+}
+
+/* ===== RULE CARDS ===== */
+.rule-card {
+  background: #020617;
   border: 1px solid #1e293b;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 25px;
 }
 
-.rule-block summary {
-  cursor: pointer;
-  padding: 16px;
-  font-weight: 600;
-  color: #e5e7eb;
-  list-style: none;
+.rule-card h2 {
+  margin-top: 0;
+  border-left: 4px solid #38bdf8;
+  padding-left: 12px;
 }
 
-.rule-block ul {
-  padding: 0 22px 18px;
+.rule-card ul {
+  padding-left: 20px;
 }
 
-.rule-block li {
+.rule-card li {
   margin-bottom: 8px;
   line-height: 1.6;
   color: #cbd5f5;
 }
 
 /* ===== MANTRA ===== */
-.mantra {
-  margin-top: 30px;
-  padding: 26px;
+.mantra-card {
   background: #1f1a10;
   border-left: 4px solid #ffb74d;
-  border-radius: 8px;
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 30px;
 }
 
-.mantra h3 {
-  margin-top: 0;
+.mantra-card h2 {
   color: #ffcc80;
+  margin-top: 0;
 }
 
-.mantra p {
-  line-height: 1.7;
+.mantra-card p {
   color: #fff3e0;
+  line-height: 1.7;
 }
 
 /* ===== FOOTER NOTE ===== */
@@ -106,11 +108,11 @@
 
 /* ===== MOBILE ===== */
 @media (max-width: 900px) {
-  .rules-layout {
+  .rules-wrapper {
     grid-template-columns: 1fr;
   }
 
-  .rules-nav {
+  .rules-sidebar {
     position: static;
   }
 }
