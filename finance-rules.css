@@ -12,17 +12,17 @@
 
 .rules-header h1 {
   color: #38bdf8;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 /* ===== GRID ===== */
 .rules-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
 }
 
-/* ===== RULE TILES ===== */
+/* ===== RULE TILE ===== */
 .rule-tile {
   background: #020617;
   border: 1px solid #1e293b;
@@ -47,21 +47,19 @@
   color: #cbd5f5;
 }
 
-/* ===== MANTRA ===== */
-.mantra-tile {
-  margin-top: 40px;
+/* ===== FULL WIDTH TILE ===== */
+.rule-tile.full-width {
+  grid-column: 1 / -1;
   background: #1f1a10;
   border-left: 4px solid #ffb74d;
-  border-radius: 12px;
-  padding: 30px;
 }
 
-.mantra-tile h2 {
-  margin-top: 0;
+.rule-tile.full-width h2 {
+  border-left: none;
   color: #ffcc80;
 }
 
-.mantra-tile p {
+.rule-tile.full-width p {
   color: #fff3e0;
   line-height: 1.7;
 }
@@ -74,9 +72,13 @@
   opacity: 0.7;
 }
 
-/* ===== MOBILE ===== */
-@media (max-width: 600px) {
-  .rule-tile {
-    padding: 20px;
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .rules-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rule-tile.full-width {
+    grid-column: 1;
   }
 }
