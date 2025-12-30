@@ -22,82 +22,109 @@
   </nav>
 </header>
 
-<main class="rules-container">
+<main class="rules-layout">
 
-  <h1>🧼 Clean-Slate Intraday Execution Rulebook</h1>
-  <p class="subtitle">(Non-Negotiable)</p>
+  <!-- LEFT NAV -->
+  <aside class="rules-nav">
+    <h3>📘 Rulebook</h3>
+    <a href="#mental">🧠 Mental Reset</a>
+    <a href="#time">⏰ Time Discipline</a>
+    <a href="#setup">📊 Setup Validation</a>
+    <a href="#risk">💰 Risk & Orders</a>
+    <a href="#execution">🛑 Execution</a>
+    <a href="#performance">⚖️ Performance</a>
+    <a href="#mantra">🔱 Daily Recitation</a>
+  </aside>
 
-  <section>
-    <h2>🧠 A. Mental Reset (Before Market)</h2>
-    <ul>
-      <li><strong>Today starts at ₹0 mental balance.</strong></li>
-      <li>Past mistakes are acknowledged and closed.</li>
-      <li>My job is execution, not prediction.</li>
-    </ul>
+  <!-- CONTENT -->
+  <section class="rules-content">
+
+    <header class="rules-header">
+      <h1>🧼 Clean-Slate Intraday Execution Rulebook</h1>
+      <p><strong>(Non-Negotiable)</strong></p>
+    </header>
+
+    <!-- A -->
+    <details id="mental" open class="rule-block">
+      <summary>🧠 A. Mental Reset (Before Market)</summary>
+      <ul>
+        <li><strong>Today starts at ₹0 mental balance.</strong> No recovery, no compensation, no carry-over.</li>
+        <li><strong>Past mistakes are acknowledged and closed.</strong> They do not travel into today’s trades.</li>
+        <li><strong>My job is execution, not prediction.</strong></li>
+      </ul>
+    </details>
+
+    <!-- B -->
+    <details id="time" class="rule-block">
+      <summary>⏰ B. Time Discipline</summary>
+      <ul>
+        <li>No entries before <strong>9:55 AM</strong>.</li>
+        <li>Buy-side entries allowed only until <strong>10:55 AM</strong>.</li>
+        <li>If a buy trade is not profitable by <strong>12:00 PM → focus only on exit</strong>.</li>
+        <li>All option-selling trades after 12:00 PM must target only <strong>₹0.05–₹0.10</strong>.</li>
+      </ul>
+    </details>
+
+    <!-- C -->
+    <details id="setup" class="rule-block">
+      <summary>📊 C. Setup Validation (All Must Align)</summary>
+      <ul>
+        <li><strong>ITM options only.</strong> No exceptions.</li>
+        <li>15-minute trend + pivot + Bollinger Bands + 50 DMA alignment required.</li>
+        <li>System Setup confirmation is mandatory.</li>
+        <li>Contra trades allowed only with <strong>strong overbought/oversold signals with Pivot point check</strong>.</li>
+        <li>For Contra trades start to accumulate from 27 RSI in 3 legs and wait until 1:30 PM for exit</li>
+      </ul>
+    </details>
+
+    <!-- D -->
+    <details id="risk" class="rule-block">
+      <summary>💰 D. Risk & Order Management</summary>
+      <ul>
+        <li>Maximum risk per script: <strong>₹15,000</strong>.</li>
+        <li>Exit orders must be placed immediately after entry.</li>
+        <li>Exit orders <strong>cannot be cancelled or widened</strong>.</li>
+      </ul>
+    </details>
+
+    <!-- E -->
+    <details id="execution" class="rule-block">
+      <summary>🛑 E. Execution Discipline</summary>
+      <ul>
+        <li>If the setup isn’t clean → <strong>I win by not trading</strong>.</li>
+        <li>If I feel emotional → <strong>entry is invalid</strong>.</li>
+        <li>After one clean exit, reassess calmly.</li>
+      </ul>
+    </details>
+
+    <!-- F -->
+    <details id="performance" class="rule-block">
+      <summary>⚖️ F. Performance Judgement</summary>
+      <ul>
+        <li>Rule-based loss = <strong>SUCCESS</strong>.</li>
+        <li>Rule-breaking profit = <strong>FAILURE</strong>.</li>
+        <li>I judge myself only on discipline, not P&amp;L.</li>
+      </ul>
+    </details>
+
+    <!-- MANTRA -->
+    <section id="mantra" class="mantra">
+      <h3>🔱 Daily Recitation (Before First Trade)</h3>
+      <p>
+        <strong>
+          “I start today with a clean slate.<br>
+          I do not trade to recover, prove, or impress.<br>
+          I wait for clarity, I respect risk, and I follow my rules.<br>
+          My duty is disciplined execution — results will follow.”
+        </strong>
+      </p>
+    </section>
+
+    <div class="footer-note">
+      Discipline over emotion • Process over outcome
+    </div>
+
   </section>
-
-  <section>
-    <h2>⏰ B. Time Discipline</h2>
-    <ul>
-      <li>No entries before <strong>9:55 AM</strong>.</li>
-      <li>Buy trades allowed only until <strong>10:55 AM</strong>.</li>
-      <li>If buy trade not profitable by <strong>12:00 PM → focus only on exit</strong>.</li>
-      <li>Post-12 PM option selling targets only <strong>₹0.05–₹0.10</strong>.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>📊 C. Setup Validation (All Must Align)</h2>
-    <ul>
-      <li><strong>ITM options only.</strong></li>
-      <li>15-min trend + Pivot + Bollinger + 50 DMA alignment mandatory.</li>
-      <li>System confirmation required.</li>
-      <li>Contra trades only with strong OB/OS + Pivot confirmation.</li>
-      <li>Contra accumulation from RSI 27 (3 legs), exit after <strong>1:30 PM</strong>.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>💰 D. Risk & Order Management</h2>
-    <ul>
-      <li>Maximum risk per script: <strong>₹15,000</strong>.</li>
-      <li>Exit orders placed immediately after entry.</li>
-      <li>Exit orders <strong>cannot be cancelled or widened</strong>.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>🛑 E. Execution Discipline</h2>
-    <ul>
-      <li>If setup isn’t clean → <strong>I win by not trading</strong>.</li>
-      <li>If emotional → <strong>entry is invalid</strong>.</li>
-      <li>After one clean exit, reassess calmly.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>⚖️ F. Performance Judgement</h2>
-    <ul>
-      <li>Rule-based loss = <strong>SUCCESS</strong>.</li>
-      <li>Rule-breaking profit = <strong>FAILURE</strong>.</li>
-      <li>Judgement based only on discipline, not P&amp;L.</li>
-    </ul>
-  </section>
-
-  <section class="mantra">
-    <h2>🔱 Daily Recitation (Before First Trade)</h2>
-    <p>
-      “I start today with a clean slate.<br>
-      I do not trade to recover, prove, or impress.<br>
-      I wait for clarity, respect risk, and follow my rules.<br>
-      My duty is disciplined execution — results will follow.”
-    </p>
-  </section>
-
-  <div class="footer-note">
-    Discipline over emotion • Process over outcome
-  </div>
-
 </main>
 
 <footer>
