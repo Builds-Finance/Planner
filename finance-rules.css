@@ -1,66 +1,116 @@
-.rules-container {
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 40px;
+/* ===== LAYOUT ===== */
+.rules-layout {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  gap: 30px;
+  max-width: 1150px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* ===== LEFT NAV ===== */
+.rules-nav {
+  position: sticky;
+  top: 90px;
   background: #020617;
+  padding: 20px;
+  border-radius: 10px;
+  height: fit-content;
+}
+
+.rules-nav h3 {
+  margin-top: 0;
+  color: #38bdf8;
+}
+
+.rules-nav a {
+  display: block;
+  color: #cbd5f5;
+  text-decoration: none;
+  margin: 10px 0;
+  font-size: 0.95rem;
+}
+
+.rules-nav a:hover {
+  color: #38bdf8;
+}
+
+/* ===== CONTENT ===== */
+.rules-content {
+  background: #020617;
+  padding: 35px;
   border-radius: 12px;
 }
 
-.rules-container h1 {
+.rules-header {
   text-align: center;
+  margin-bottom: 30px;
+}
+
+.rules-header h1 {
   color: #38bdf8;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
-.subtitle {
-  text-align: center;
-  opacity: 0.8;
-  margin-bottom: 40px;
+/* ===== RULE BLOCKS ===== */
+.rule-block {
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #1e293b;
 }
 
-section {
-  margin-bottom: 35px;
-}
-
-section h2 {
-  border-left: 4px solid #38bdf8;
-  padding-left: 12px;
+.rule-block summary {
+  cursor: pointer;
+  padding: 16px;
+  font-weight: 600;
   color: #e5e7eb;
-  margin-bottom: 12px;
+  list-style: none;
 }
 
-section ul {
-  padding-left: 20px;
+.rule-block ul {
+  padding: 0 22px 18px;
 }
 
-section li {
+.rule-block li {
   margin-bottom: 8px;
   line-height: 1.6;
   color: #cbd5f5;
 }
 
+/* ===== MANTRA ===== */
 .mantra {
+  margin-top: 30px;
+  padding: 26px;
   background: #1f1a10;
   border-left: 4px solid #ffb74d;
-  padding: 25px;
   border-radius: 8px;
 }
 
-.mantra h2 {
-  border: none;
-  padding-left: 0;
+.mantra h3 {
+  margin-top: 0;
   color: #ffcc80;
 }
 
 .mantra p {
-  font-size: 1.05rem;
   line-height: 1.7;
   color: #fff3e0;
 }
 
+/* ===== FOOTER NOTE ===== */
 .footer-note {
   text-align: center;
   margin-top: 40px;
   font-size: 0.9rem;
   opacity: 0.7;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 900px) {
+  .rules-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .rules-nav {
+    position: static;
+  }
 }
