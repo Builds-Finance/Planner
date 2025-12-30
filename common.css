@@ -13,10 +13,25 @@ header {
   background: #020617;
 }
 
+/* ===== GLOBAL LOGO (DO NOT CHANGE) ===== */
 .logo {
-  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 18px;
+  font-weight: 700;
+  color: #38bdf8;
+  white-space: nowrap;
+  font-family: Arial, sans-serif;
 }
+
+/* Prevent page-level overrides */
+header .logo {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #38bdf8 !important;
+}
+
 
 nav a {
   color: #e5e7eb;
