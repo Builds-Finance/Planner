@@ -1,0 +1,15 @@
+.page h1 {
+  color: #38bdf8;
+}
+
+.page ul {
+  list-style: none;
+  padding: 0;
+}
+
+.page li {
+  background: #020617;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 6px;
+}
