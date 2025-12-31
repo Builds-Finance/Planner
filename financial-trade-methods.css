@@ -1,0 +1,73 @@
+.methods-page {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.methods-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #e5e7eb;
+  margin-bottom: 25px;
+}
+
+.methods-title span {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-left: 6px;
+}
+
+.methods-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.method-card {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  padding: 22px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+.method-card h2 {
+  font-size: 15px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border-left: 3px solid #38bdf8;
+}
+
+.method-card h3 {
+  font-size: 14px;
+  margin-top: 16px;
+  margin-bottom: 6px;
+  color: #e5e7eb;
+}
+
+.method-card ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.method-card li {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 6px;
+  color: #cbd5f5;
+}
+
+.method-note {
+  margin-top: 12px;
+  font-size: 13px;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .methods-grid {
+    grid-template-columns: 1fr;
+  }
+}
