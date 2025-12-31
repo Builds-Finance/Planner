@@ -71,3 +71,24 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+
+/* ===== PAGE BODY ===== */
+.page-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== SCROLLABLE CONTENT ONLY ===== */
+.scroll-area {
+  flex: 1;
+  overflow-y: auto;      /* ✅ scrollbar appears HERE */
+  padding: 20px;
+}
+
+/* Optional: smoother scrolling */
+.scroll-area {
+  scrollbar-width: thin;
+}
