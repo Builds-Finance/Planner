@@ -94,3 +94,22 @@
     grid-column: span 1;
   }
 }
+
+/* ===== GLOWING RECITATION ===== */
+.glow-title {
+  color: #38bdf8;
+  text-shadow: 0 0 6px rgba(56, 189, 248, 0.6);
+}
+
+.glow-text {
+  color: #e5e7eb;
+  font-size: 15px;
+  line-height: 1.7;
+  text-align: center;
+  margin-top: 12px;
+
+  /* Glow */
+  text-shadow:
+    0 0 8px rgba(56, 189, 248, 0.35),
+    0 0 16px rgba(56, 189, 248, 0.2);
+}
