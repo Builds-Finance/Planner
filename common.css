@@ -55,3 +55,51 @@ footer {
 .page {
   padding: 40px;
 }
+
+/* ===== STICKY FOOTER ===== */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  margin-top: auto;
+}
+
+/* ===== STICKY MAIN HEADER ===== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(180deg, #020617, #020617);
+}
+
+/* ===== STICKY PAGE TITLE BAR ===== */
+.page-title-bar {
+  position: sticky;
+  top: 64px; /* height of header */
+  z-index: 900;
+  background: linear-gradient(180deg, #020617, #020617);
+  padding: 18px 20px;
+  border-bottom: 1px solid #1e293b;
+}
+.page-title-bar h1 {
+  font-size: 22px;
+  margin: 0;
+  color: #e5e7eb;
+}
+
+.page-title-bar span {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-left: 6px;
+}
+
