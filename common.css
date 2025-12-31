@@ -16,11 +16,13 @@ body {
 
 /* Header */
 header {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background: #020617;
 }
+
+
 
 /* ===== GLOBAL LOGO (DO NOT CHANGE) ===== */
 .logo {
@@ -80,8 +82,12 @@ main {
 }
 
 footer {
-  margin-top: auto;
+  background: #020617;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #1e293b;
 }
+
 
 /* ===== STICKY MAIN HEADER ===== */
 header {
@@ -94,12 +100,13 @@ header {
 /* ===== STICKY PAGE TITLE BAR ===== */
 .page-title-bar {
   position: sticky;
-  top: 64px; /* height of header */
+  top: 64px; /* header height */
   z-index: 900;
-  background: linear-gradient(180deg, #020617, #020617);
-  padding: 18px 20px;
+  background: #020617;
+  padding: 16px 20px;
   border-bottom: 1px solid #1e293b;
 }
+
 .page-title-bar h1 {
   font-size: 22px;
   margin: 0;
