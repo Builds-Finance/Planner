@@ -28,54 +28,71 @@
 
   <div class="scroll-area">
 
-    <form id="tradeForm" class="trade-form">
-
+    <section class="card">
       <h2>📌 Trade Context</h2>
 
-      <label>Stock Name</label>
-      <input type="text" id="stock" placeholder="SBIN" required>
+      <form id="tradeForm" class="form-grid">
 
-      <label>Current Time</label>
-      <input type="time" id="time" required>
+        <div class="form-group">
+          <label>Stock Name</label>
+          <input type="text" id="stock" placeholder="SBIN">
+        </div>
 
-      <label>15-Min RSI</label>
-      <input type="number" id="rsi" placeholder="e.g. 28 / 74">
+        <div class="form-group">
+          <label>Current Time</label>
+          <input type="time" id="time">
+        </div>
 
-      <label>Channel Break Status</label>
-      <select id="channel">
-        <option value="Not broken">Not broken</option>
-        <option value="Broken on candle close">Broken on candle close</option>
-        <option value="Partial / Wick">Partial / Wick</option>
-      </select>
+        <div class="form-group">
+          <label>15-Min RSI</label>
+          <input type="number" id="rsi" placeholder="e.g. 28 / 74">
+        </div>
 
-      <label>Bollinger + Pivot Alignment</label>
-      <select id="alignment">
-        <option value="No">No</option>
-        <option value="Yes">Yes</option>
-      </select>
+        <div class="form-group">
+          <label>Channel Break Status</label>
+          <select id="channel">
+            <option>Not broken</option>
+            <option>Broken on candle close</option>
+            <option>Partial / Wick</option>
+          </select>
+        </div>
 
-      <label>Trade Type</label>
-      <select id="tradeType">
-        <option value="Option Buying">Option Buying</option>
-        <option value="Contra Trade">Contra Trade</option>
-        <option value="No Trade Yet">No Trade Yet</option>
-      </select>
+        <div class="form-group">
+          <label>Bollinger + Pivot Alignment</label>
+          <select id="alignment">
+            <option>No</option>
+            <option>Yes</option>
+          </select>
+        </div>
 
-      <button type="button" onclick="generatePrompt()">
+        <div class="form-group">
+          <label>Trade Type</label>
+          <select id="tradeType">
+            <option>Option Buying</option>
+            <option>Contra Trade</option>
+            <option>No Trade Yet</option>
+          </select>
+        </div>
+
+      </form>
+
+      <button class="primary-btn" onclick="generatePrompt()">
         📋 Generate ChatGPT Evaluation Prompt
       </button>
 
-      <p class="note">
-        Paste this prompt into ChatGPT along with your 15-min chart screenshot.
+      <p class="helper-text">
+        Paste this prompt into ChatGPT along with your 15-minute chart screenshot.
       </p>
+    </section>
 
-    </form>
+    <section class="card">
+      <h2>🧠 Generated Prompt</h2>
+      <textarea id="output" readonly placeholder="Generated prompt will appear here..."></textarea>
 
-    <textarea id="output" rows="12" readonly placeholder="Generated prompt will appear here..."></textarea>
-
-    <a class="open-chatgpt" href="https://chat.openai.com" target="_blank">
-      🔗 Open ChatGPT
-    </a>
+      <a class="open-chatgpt" href="https://chat.openai.com" target="_blank">
+        🔗 Open ChatGPT
+      </a>
+    </section>
 
   </div>
 
