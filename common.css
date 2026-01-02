@@ -2,7 +2,10 @@
 html, body {
   height: 100%;
   margin: 0;
+  overflow-y: auto;   /* ✅ restores scrollbar */
+  overflow-x: hidden;
 }
+
 
 body {
   display: flex;
