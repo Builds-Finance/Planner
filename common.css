@@ -10,7 +10,6 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* prevent page scroll */
   font-family: Arial, sans-serif;
   background: #0f172a;
   color: #e5e7eb;
