@@ -99,15 +99,17 @@ main {
 
 /* ===== FOOTER (ALWAYS VISIBLE) ===== */
 footer {
-  height: 48px;
+  margin-top: auto;              /* 🔑 pushes footer to bottom */
+  width: 100%;
+  padding: 18px 12px;
+  text-align: center;
   background: #020617;
-  border-top: 1px solid #1e293b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: #94a3b8;
   font-size: 13px;
-  flex-shrink: 0; /* prevents footer collapse */
+  border-top: 1px solid #1e293b;
 }
+
+
 
 /* ===== OPTIONAL PAGE PADDING CLASS ===== */
 .page {
