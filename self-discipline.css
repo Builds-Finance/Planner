@@ -1,3 +1,17 @@
+/* ===== PAGE SCROLL FIX ===== */
+.page-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 40px;
+}
+
 /* ===== Grid Layout ===== */
 .discipline-grid {
   max-width: 1000px;
