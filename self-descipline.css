@@ -1,75 +1,77 @@
-/* ===== Container ===== */
-.discipline-container {
-  max-width: 900px;
+/* ===== Grid Layout ===== */
+.discipline-grid {
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
-/* ===== Sections ===== */
-.discipline-section {
+.discipline-card {
   background: #020617;
   border: 1px solid #1e293b;
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 20px;
-  margin-bottom: 20px;
 }
 
-.discipline-section h2 {
-  margin-top: 0;
+.discipline-card h2 {
+  margin: 0 0 16px;
   font-size: 18px;
   color: #38bdf8;
   border-left: 4px solid #38bdf8;
   padding-left: 10px;
 }
 
-/* ===== List ===== */
-.discipline-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.discipline-list li {
+/* ===== Items ===== */
+.discipline-item {
+  display: flex;
+  align-items: center;
   padding: 10px 0;
   border-bottom: 1px dashed #1e293b;
   font-size: 15px;
-  display: flex;
-  gap: 10px;
 }
 
-.discipline-list li:last-child {
+.discipline-item:last-child {
   border-bottom: none;
 }
 
-/* ===== Time Label ===== */
-.discipline-time {
+.time {
+  min-width: 110px;
   color: #94a3b8;
   font-weight: 600;
-  min-width: 90px;
+}
+
+.task {
+  color: #e5e7eb;
+}
+
+/* ===== Full Width Section ===== */
+.full-width {
+  grid-column: 1 / -1;
 }
 
 /* ===== Footer Note ===== */
-.discipline-note {
+.discipline-footer-note {
   text-align: center;
-  margin-top: 30px;
+  padding: 20px 0 40px;
   font-size: 14px;
   opacity: 0.75;
 }
 
-/* ===== Mobile Optimisation ===== */
-@media (max-width: 600px) {
-
-  .discipline-section h2 {
-    font-size: 16px;
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  .discipline-grid {
+    grid-template-columns: 1fr;
   }
 
-  .discipline-list li {
-    font-size: 14px;
+  .discipline-item {
     flex-direction: column;
+    align-items: flex-start;
     gap: 4px;
   }
 
-  .discipcipline-time {
+  .time {
     min-width: unset;
   }
 }
