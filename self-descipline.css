@@ -1,0 +1,75 @@
+/* ===== Container ===== */
+.discipline-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== Sections ===== */
+.discipline-section {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.discipline-section h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #38bdf8;
+  border-left: 4px solid #38bdf8;
+  padding-left: 10px;
+}
+
+/* ===== List ===== */
+.discipline-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.discipline-list li {
+  padding: 10px 0;
+  border-bottom: 1px dashed #1e293b;
+  font-size: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.discipline-list li:last-child {
+  border-bottom: none;
+}
+
+/* ===== Time Label ===== */
+.discipline-time {
+  color: #94a3b8;
+  font-weight: 600;
+  min-width: 90px;
+}
+
+/* ===== Footer Note ===== */
+.discipline-note {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+/* ===== Mobile Optimisation ===== */
+@media (max-width: 600px) {
+
+  .discipline-section h2 {
+    font-size: 16px;
+  }
+
+  .discipline-list li {
+    font-size: 14px;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .discipcipline-time {
+    min-width: unset;
+  }
+}
