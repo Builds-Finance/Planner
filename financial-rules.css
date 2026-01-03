@@ -1,15 +1,32 @@
-/* LEFT ACCENT LINE FOR EACH RULE TILE */
-.rule-tile {
+/* ===============================
+   FINANCIAL RULES – SECTION CARDS
+   =============================== */
+
+/* Wrap each rule section visually */
+.financial-rules section,
+.financial-rules > div {
   position: relative;
-  overflow: hidden;
+  margin: 28px 0;
+  padding: 28px 28px 28px 36px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(2, 6, 23, 0.95),
+    rgba(2, 6, 23, 0.85)
+  );
+
+  border: 1px solid #1e293b;
+  border-radius: 16px;
 }
 
-.rule-tile::before {
+/* Blue accent line */
+.financial-rules section::before,
+.financial-rules > div::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 16px;
-  bottom: 16px;
+  top: 20px;
+  bottom: 20px;
   width: 4px;
   border-radius: 4px;
   background: linear-gradient(
@@ -17,10 +34,24 @@
     #38bdf8,
     rgba(56, 189, 248, 0.25)
   );
-  opacity: 0.9;
 }
 
-/* Stronger glow on hover */
-.rule-tile:hover::before {
-  box-shadow: 0 0 14px rgba(56, 189, 248, 0.6);
+/* Headings inside sections */
+.financial-rules h2 {
+  color: #38bdf8;
+  margin-bottom: 12px;
+}
+
+/* Text spacing cleanup */
+.financial-rules p,
+.financial-rules li {
+  line-height: 1.55;
+  color: #e5e7eb;
+}
+
+/* Prevent horizontal overflow */
+.financial-rules {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
