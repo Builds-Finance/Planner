@@ -1,82 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Financial Trade Methods | Kunal Finance</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="common.css">
-  <link rel="stylesheet" href="financial-trade-methods.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Financial Trade Methods | Kunal Finance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="financial-trade-methods.css">
 </head>
 
 <body>
 
-<header>
-  <a href="index.html" class="logo">📊 Kunal Finance</a>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="financial-roadmap.html">Financial Roadmap</a>
-    <a href="trade-evaluation.html">Trade Evaluation</a>
-  </nav>
-</header>
+    <header>
+        <a href="index.html" class="logo">📊 Kunal Finance</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="financial-roadmap.html">Financial Roadmap</a>
+            <a href="trade-evaluation.html">Trade Evaluation</a>
+        </nav>
+    </header>
 
-<main>
-  <div class="scroll-area">
+    <main>
+        <div class="scroll-area">
+            <section class="methods-grid">
 
-    <section class="methods-grid">
+                <!-- METHOD 1 -->
+                <div class="method-card">
+                    <h2>🧲 Method 1 – Positional Iron Fly (Expiry Hold)</h2>
 
-      <!-- METHOD 1 -->
-      <div class="method-card">
-        <h2>1️⃣ Positional Iron Fly (Full Expiry Hold)</h2>
-        <ul>
-          <li>Create Iron Fly in one stock and hold for the entire expiry.</li>
-          <li>Hedge buying must be decided using:
-            <ul>
-              <li>Overall trend of the stock</li>
-              <li>Option chain OI levels</li>
-              <li>Support and resistance zones</li>
-            </ul>
-          </li>
-          <li>If price touches any pivot level:
-            <ul>
-              <li>Plan adjustment</li>
-              <li>Create another Iron Fly at current levels</li>
-              <li>Do not disturb the existing Iron Fly</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+                    <ul>
+                        <li><strong>Holding Period:</strong> Entire expiry</li>
+                        <li><strong>Objective:</strong> Trade for time decay + controlled range, not a lottery payoff</li>
+                    </ul>
 
-      <!-- METHOD 2 -->
-      <div class="method-card">
-        <h2>2️⃣ Option Buying – System Based (Intraday)</h2>
-        <ul>
-          <li>Trades taken daily strictly as per system setup.</li>
-          <li>All predefined rules must be satisfied before entry.</li>
-          <li>Risk, timing, and exit rules are non-negotiable.</li>
-          <li>No discretionary or emotional trades allowed.</li>
-        </ul>
-      </div>
+                    <h3>Hedge Selection Based On</h3>
+                    <ul>
+                        <li>Overall trend of the stock</li>
+                        <li>Option chain OI build-up</li>
+                        <li>Major support &amp; resistance zones</li>
+                        <li>Use Weekly chart for trend identification</li>
+                    </ul>
 
-      <!-- METHOD 3 -->
-      <div class="method-card">
-        <h2>3️⃣ Option Buying – 15 Min RSI + Pivot</h2>
-        <ul>
-          <li>Trades based on 15-minute RSI levels.</li>
-          <li>Overbought / oversold conditions must be clearly identified.</li>
-          <li>Pivot point interaction is mandatory.</li>
-          <li>Only immediate momentum trades; no holding bias.</li>
-        </ul>
-      </div>
+                    <h3>Adjustment Rule</h3>
+                    <ul>
+                        <li>If price touches pivot / extreme level</li>
+                        <li>Create new Iron Fly at current price</li>
+                        <li><strong>Do not modify existing Iron Fly</strong></li>
+                    </ul>
 
-    </section>
+                    <p class="method-note">
+                        Philosophy: Layer positions, do not repair fearfully.
+                    </p>
+                </div>
 
-  </div>
-</main>
+                <!-- METHOD 2 -->
+                <div class="method-card">
+                    <h2>⚡ Method 2 – Intraday Option Buying (System-Based)</h2>
 
-<footer>
-  © 2025 Kunal Finance. All rights reserved.
-</footer>
+                    <ul>
+                        <li><strong>Objective:</strong> Momentum capture</li>
+                    </ul>
+
+                    <h3>Entry Allowed Only If</h3>
+                    <ul>
+                        <li>System setup is fully aligned</li>
+                        <li>Trend &amp; confirmation present</li>
+                        <li>Predefined risk–reward available</li>
+                    </ul>
+
+                    <h3>Execution Rules</h3>
+                    <ul>
+                        <li>Strict stop loss</li>
+                        <li>No revenge or recovery trades</li>
+                        <li>One trade at a time</li>
+                    </ul>
+
+                    <p class="method-note">
+                        Philosophy: Execution is the edge, not prediction.
+                    </p>
+                </div>
+
+                <!-- METHOD 3 -->
+                <div class="method-card">
+                    <h2>🔁 Method 3 – 15-Min RSI Reversal Buying</h2>
+
+                    <h3>Mandatory Conditions</h3>
+                    <ul>
+                        <li>RSI in overbought / oversold zone</li>
+                        <li>Pivot point confluence required</li>
+                    </ul>
+
+                    <h3>Execution Discipline</h3>
+                    <ul>
+                        <li>No early anticipation</li>
+                        <li>Wait for confirmation</li>
+                        <li>Exit strictly as per plan</li>
+                    </ul>
+
+                    <p class="method-note">
+                        Philosophy: Let price come to you.
+                    </p>
+                </div>
+
+            </section>
+
+
+        </div>
+    </main>
+
+    <footer>
+        © 2025 Kunal Finance. All rights reserved.
+    </footer>
 
 </body>
+
 </html>
