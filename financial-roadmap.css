@@ -1,5 +1,5 @@
 /* ===============================
-   FINANCIAL ROADMAP – FULL SCREEN
+   FINANCIAL ROADMAP – FIXED
    =============================== */
 
 html, body {
@@ -9,25 +9,26 @@ html, body {
   overflow-x: hidden;
 }
 
-/* FULL PAGE CANVAS */
+/* IMPORTANT: do NOT style main directly */
 main {
-  width: 100%;
-  min-height: 100vh;
-  padding: 56px 0 96px;
-  position: relative;
+  padding: 0;
 }
 
-/* WIDE CONTENT WRAPPER (NOT BOXED) */
-main > * {
-  max-width: 1400px;              /* wider than before */
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 64px;
-  padding-right: 64px;
+/* SCROLL AREA (already exists in HTML) */
+.scroll-area {
+  padding: 56px 0 96px;
+}
+
+/* FULL-WIDTH ROADMAP CANVAS */
+.roadmap-page {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 64px;
 }
 
 /* PAGE TITLE */
-main h1 {
+.roadmap-page h1 {
   font-size: 38px;
   color: #f8fafc;
   display: flex;
@@ -37,7 +38,7 @@ main h1 {
 }
 
 /* TAGLINE STRIP */
-main h1 + p {
+.page-title-bar p {
   width: 100%;
   max-width: 1100px;
   padding: 18px 24px;
@@ -53,13 +54,13 @@ main h1 + p {
   margin-bottom: 72px;
 }
 
-/* VERTICAL TIMELINE – FULL HEIGHT */
-main::before {
+/* VERTICAL TIMELINE */
+.roadmap-page::before {
   content: "";
   position: absolute;
   top: 240px;
   bottom: 80px;
-  left: calc(50% - 640px); /* aligns with content start */
+  left: 64px;
   width: 2px;
   background: linear-gradient(
     180deg,
@@ -69,7 +70,7 @@ main::before {
 }
 
 /* PHASE HEADER */
-main h2 {
+.roadmap-card h2 {
   margin-top: 80px;
   font-size: 24px;
   color: #38bdf8;
@@ -79,7 +80,7 @@ main h2 {
 }
 
 /* PHASE DOT */
-main h2::before {
+.roadmap-card h2::before {
   content: "";
   position: absolute;
   left: -10px;
@@ -92,26 +93,25 @@ main h2::before {
 }
 
 /* PHASE SUBTITLE */
-main h3 {
+.roadmap-card h3 {
   padding-left: 52px;
   font-size: 19px;
   color: #e5e7eb;
   margin-top: 8px;
 }
 
-main h3 + p {
+.date-range {
   padding-left: 52px;
   color: #94a3b8;
   font-size: 14px;
   margin-bottom: 22px;
 }
 
-/* PHASE CARD */
-main ul {
+/* PHASE CARD CONTENT */
+.roadmap-card ul {
   margin-left: 52px;
   margin-bottom: 42px;
   padding: 30px 34px;
-  width: calc(100% - 52px);
   background: linear-gradient(
     180deg,
     rgba(2, 6, 23, 0.96),
@@ -125,7 +125,7 @@ main ul {
 }
 
 /* LIST ITEMS */
-main li {
+.roadmap-card li {
   padding: 16px 0 16px 34px;
   position: relative;
   font-size: 14.8px;
@@ -134,11 +134,11 @@ main li {
   border-bottom: 1px dashed rgba(148, 163, 184, 0.22);
 }
 
-main li:last-child {
+.roadmap-card li:last-child {
   border-bottom: none;
 }
 
-main li::before {
+.roadmap-card li::before {
   content: "➜";
   position: absolute;
   left: 0;
@@ -146,8 +146,8 @@ main li::before {
   font-weight: bold;
 }
 
-/* REASON / NOTE */
-main ul + p {
+/* NOTES */
+.note {
   margin-left: 52px;
   margin-top: -12px;
   margin-bottom: 28px;
@@ -156,30 +156,27 @@ main ul + p {
   opacity: 0.9;
 }
 
+/* FINAL FULL WIDTH CARD */
+.full-width {
+  margin-top: 80px;
+}
+
 /* MOBILE */
 @media (max-width: 900px) {
-  main > * {
-    padding-left: 24px;
-    padding-right: 24px;
+  .roadmap-page {
+    padding: 0 24px;
   }
 
-  main::before {
+  .roadmap-page::before {
     left: 24px;
   }
 
-  main h1 {
-    font-size: 30px;
-  }
-
-  main ul {
-    margin-left: 30px;
-    padding: 22px 24px;
-    width: calc(100% - 30px);
-  }
-
-  main h2,
-  main h3,
-  main h3 + p {
+  .roadmap-card h2,
+  .roadmap-card h3,
+  .date-range,
+  .roadmap-card ul,
+  .note {
     padding-left: 30px;
+    margin-left: 0;
   }
 }
