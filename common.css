@@ -14,7 +14,9 @@ html, body {
   color: #e5e7eb;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   overflow: hidden; /* 🔒 only inner scroll allowed */
+  overflow-x: hidden;
 }
+
 
 /* ===============================
    APP LAYOUT
