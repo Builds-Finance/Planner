@@ -1,57 +1,103 @@
 /* ===============================
-   FINANCIAL RULES – SECTION CARDS
+   FINANCIAL RULES – FULL SCREEN
    =============================== */
 
-/* Wrap each rule section visually */
-.financial-rules section,
-.financial-rules > div {
-  position: relative;
-  margin: 28px 0;
-  padding: 28px 28px 28px 36px;
+main {
+  width: 100%;
+}
 
-  background: linear-gradient(
-    180deg,
-    rgba(2, 6, 23, 0.95),
-    rgba(2, 6, 23, 0.85)
-  );
+/* Scroll area should use full width */
+.scroll-area {
+  width: 100%;
+  padding: 40px 48px 80px;
+  box-sizing: border-box;
+}
 
+/* Center content while still using full screen */
+.rules-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* Rule tiles */
+.rule-tile {
+  background: linear-gradient(180deg, #020617 0%, #020617cc 100%);
   border: 1px solid #1e293b;
   border-radius: 16px;
+  padding: 22px 24px;
+  box-shadow:
+    inset 0 0 0 1px rgba(56, 189, 248, 0.03),
+    0 12px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Blue accent line */
-.financial-rules section::before,
-.financial-rules > div::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 20px;
-  bottom: 20px;
-  width: 4px;
-  border-radius: 4px;
-  background: linear-gradient(
-    180deg,
-    #38bdf8,
-    rgba(56, 189, 248, 0.25)
-  );
+.rule-tile:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    inset 0 0 0 1px rgba(56, 189, 248, 0.08),
+    0 18px 40px rgba(0, 0, 0, 0.6);
 }
 
-/* Headings inside sections */
-.financial-rules h2 {
+/* Headings */
+.rule-tile h2 {
   color: #38bdf8;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  font-size: 1.1rem;
 }
 
-/* Text spacing cleanup */
-.financial-rules p,
-.financial-rules li {
-  line-height: 1.55;
+/* Lists */
+.rule-tile ul {
+  padding-left: 18px;
+}
+
+.rule-tile li,
+.rule-tile p {
   color: #e5e7eb;
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
-/* Prevent horizontal overflow */
-.financial-rules {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
+/* Nested list */
+.rule-tile ul ul {
+  margin-top: 6px;
+}
+
+/* FULL WIDTH TILE (Daily Recitation) */
+.rule-tile.full-width {
+  grid-column: 1 / -1;
+  padding: 32px;
+  background: linear-gradient(
+    90deg,
+    rgba(56, 189, 248, 0.12),
+    rgba(2, 6, 23, 0.95)
+  );
+  border: 1px solid rgba(56, 189, 248, 0.25);
+}
+
+/* Glow heading */
+.glow-title {
+  color: #7dd3fc;
+  text-shadow: 0 0 12px rgba(56, 189, 248, 0.45);
+  margin-bottom: 16px;
+}
+
+/* Recitation text */
+.recitation {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.glow-text {
+  color: #e5f4ff;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.35);
+}
+
+/* Responsive tuning */
+@media (max-width: 768px) {
+  .scroll-area {
+    padding: 28px 20px 60px;
+  }
 }
