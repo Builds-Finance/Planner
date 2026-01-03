@@ -1,177 +1,176 @@
-/* ===============================
-   TRADE EVALUATION – CLEAN SCROLL FIX
-   =============================== */
+/* =========================================================
+   TRADE EVALUATION — PAGE-SPECIFIC STYLES
+   Header & Footer are FIXED via common.css
+   ONLY this page scrolls
+   ========================================================= */
 
-body.dark {
-  background:
-    radial-gradient(
-      1200px 600px at 10% 10%,
-      rgba(56, 189, 248, 0.06),
-      transparent 40%
-    ),
-    linear-gradient(180deg, #020617 0%, #020617 100%);
-  color: #e5e7eb;
-
-  /* IMPORTANT */
-  overflow-x: hidden;
+/* ---------- Page Scroll Container ---------- */
+.trade-evaluation-page {
+  height: calc(100vh - 120px); /* header + footer space */
   overflow-y: auto;
+  overflow-x: hidden;
+  padding: 32px 0 40px;
+  box-sizing: border-box;
 }
 
-/* MAIN AREA — NO INNER SCROLL */
-main {
+/* ---------- Centered Content Wrapper ---------- */
+.trade-evaluation-container {
   width: 100%;
-  padding-top: 96px;   /* header height safety */
-  padding-bottom: 96px; /* footer height safety */
-}
-
-/* CONTENT WRAPPER */
-.scroll-area {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 48px 24px;
-
-  /* REMOVE SCROLL BEHAVIOR */
-  overflow: visible;
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
 
-/* CARD BASE */
-.card {
+/* ---------- Card Base ---------- */
+.trade-card {
   position: relative;
-  background: linear-gradient(
-    180deg,
-    rgba(2, 6, 23, 0.85),
-    rgba(2, 6, 23, 0.95)
+  background: radial-gradient(
+    120% 120% at 0% 0%,
+    rgba(0, 180, 255, 0.08),
+    rgba(0, 0, 0, 0.85)
   );
-  border: 1px solid #1e293b;
-  border-radius: 16px;
-  padding: 28px 30px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  border-radius: 18px;
+  padding: 28px 30px 30px;
+  margin-bottom: 28px;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06),
+    0 12px 40px rgba(0, 0, 0, 0.6);
 }
 
-/* FADING BLUE LEFT LINE (PERFECT MATCH) */
-.card::before {
+/* ---------- Fading Blue Accent Line ---------- */
+.trade-card::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 14px;
-  bottom: 14px;
+  top: 18px;
+  bottom: 18px;
   width: 4px;
-  border-radius: 6px;
+  border-radius: 4px;
   background: linear-gradient(
     180deg,
-    transparent,
-    rgba(56, 189, 248, 0.9),
-    rgba(56, 189, 248, 0.35),
-    transparent
+    rgba(0, 200, 255, 0),
+    rgba(0, 200, 255, 0.9),
+    rgba(0, 200, 255, 0)
   );
 }
 
-/* CARD HEADINGS */
-.card h2 {
+/* ---------- Section Headers ---------- */
+.trade-card h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 20px;
-  color: #38bdf8;
+  font-weight: 700;
+  color: #56c7ff;
   margin-bottom: 20px;
 }
 
-/* FORM GRID */
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px 20px;
-  margin-bottom: 24px;
+/* ---------- Labels ---------- */
+.trade-label {
+  font-size: 13px;
+  color: #8faec4;
+  margin-bottom: 6px;
 }
 
-/* FORM GROUP */
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.form-group label {
-  font-size: 12px;
-  color: #94a3b8;
-}
-
-/* INPUTS */
-input,
-select,
-textarea {
-  background: #020617;
-  border: 1px solid #1e293b;
-  border-radius: 10px;
-  padding: 10px 12px;
-  font-size: 14px;
-  color: #e5e7eb;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  outline: none;
-  border-color: #38bdf8;
-  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.4);
-}
-
-/* TEXTAREA */
-textarea {
+/* ---------- Inputs & Selects ---------- */
+.trade-input,
+.trade-select {
   width: 100%;
-  min-height: 220px;
-  resize: vertical;
-  margin-bottom: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 10px 14px;
+  color: #eaf6ff;
+  font-size: 14px;
+  outline: none;
 }
 
-/* PRIMARY BUTTON */
-.primary-btn {
+.trade-input:focus,
+.trade-select:focus {
+  border-color: rgba(0, 200, 255, 0.6);
+  box-shadow: 0 0 0 2px rgba(0, 200, 255, 0.15);
+}
+
+/* ---------- Grid Layout ---------- */
+.trade-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px 22px;
+  margin-bottom: 18px;
+}
+
+/* ---------- Button ---------- */
+.trade-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   background: linear-gradient(
-    180deg,
-    rgba(56, 189, 248, 0.25),
-    rgba(56, 189, 248, 0.15)
+    135deg,
+    rgba(0, 180, 255, 0.9),
+    rgba(0, 120, 200, 0.9)
   );
-  border: 1px solid #38bdf8;
-  color: #38bdf8;
+  color: #00131f;
+  border: none;
+  border-radius: 12px;
   padding: 12px 18px;
   font-size: 14px;
-  border-radius: 12px;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
-.primary-btn:hover {
-  background: rgba(56, 189, 248, 0.35);
+.trade-button:hover {
   transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(0, 180, 255, 0.35);
 }
 
-/* HELPER TEXT */
-.helper-text {
+/* ---------- Helper Text ---------- */
+.trade-helper {
   margin-top: 10px;
   font-size: 13px;
-  color: #94a3b8;
+  color: #8faec4;
 }
 
-/* OPEN CHATGPT */
-.open-chatgpt {
-  display: inline-block;
-  margin-top: 8px;
-  color: #38bdf8;
-  text-decoration: none;
-  font-size: 14px;
+/* ---------- Generated Prompt Area ---------- */
+.generated-prompt-box {
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 14px;
+  padding: 18px 20px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  color: #d8ecff;
+  line-height: 1.6;
+  max-height: 320px;
+  overflow-y: auto;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.open-chatgpt:hover {
-  text-decoration: underline;
+/* ---------- Scrollbar Styling (Local Only) ---------- */
+.trade-evaluation-page::-webkit-scrollbar {
+  width: 10px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .form-grid {
-    grid-template-columns: 1fr;
+.trade-evaluation-page::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.trade-evaluation-page::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 200, 255, 0.9),
+    rgba(0, 120, 200, 0.9)
+  );
+  border-radius: 10px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .trade-evaluation-page {
+    padding: 24px 0 32px;
   }
 
-  .scroll-area {
-    padding: 32px 16px;
+  .trade-card {
+    padding: 22px 20px 24px;
   }
 }
