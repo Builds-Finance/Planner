@@ -1,91 +1,28 @@
-/* ===== PAGE SCROLL FIX ===== */
-.page-body {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
+/* ===============================
+   DAILY DISCIPLINE
+   =============================== */
 
-.scroll-area {
-  flex: 1;
-  overflow-y: auto;
-  padding-bottom: 40px;
-}
-
-/* ===== Grid Layout ===== */
-.discipline-grid {
-  max-width: 1000px;
+.discipline-container {
+  max-width: 700px;
   margin: 0 auto;
-  padding: 30px 20px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
 }
 
-.discipline-card {
+.discipline-container h1,
+.discipline-container h2 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.discipline-container p,
+.discipline-container li {
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+.discipline-step {
   background: #020617;
   border: 1px solid #1e293b;
-  border-radius: 14px;
-  padding: 20px;
-}
-
-.discipline-card h2 {
-  margin: 0 0 16px;
-  font-size: 18px;
-  color: #38bdf8;
-  border-left: 4px solid #38bdf8;
-  padding-left: 10px;
-}
-
-/* ===== Items ===== */
-.discipline-item {
-  display: flex;
-  align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px dashed #1e293b;
-  font-size: 15px;
-}
-
-.discipline-item:last-child {
-  border-bottom: none;
-}
-
-.time {
-  min-width: 110px;
-  color: #94a3b8;
-  font-weight: 600;
-}
-
-.task {
-  color: #e5e7eb;
-}
-
-/* ===== Full Width Section ===== */
-.full-width {
-  grid-column: 1 / -1;
-}
-
-/* ===== Footer Note ===== */
-.discipline-footer-note {
-  text-align: center;
-  padding: 20px 0 40px;
-  font-size: 14px;
-  opacity: 0.75;
-}
-
-/* ===== Mobile ===== */
-@media (max-width: 768px) {
-  .discipline-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .discipline-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-  }
-
-  .time {
-    min-width: unset;
-  }
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 14px;
 }
