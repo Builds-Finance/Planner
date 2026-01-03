@@ -96,18 +96,29 @@
   line-height: 1.55;
 }
 
-/* MARKET PREPARATION – FULL WIDTH */
+/* ===============================
+   MARKET PREPARATION – FULL WIDTH
+   =============================== */
+
 .market-discipline {
-  margin-top: 48px;
-  padding: 30px 30px 28px;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  margin-top: 70px;
+  padding: 40px 24px 42px;
   background: linear-gradient(
     180deg,
-    rgba(2, 6, 23, 0.95),
-    rgba(2, 6, 23, 0.95)
+    rgba(2, 6, 23, 0.98),
+    rgba(2, 6, 23, 0.98)
   );
-  border: 1px solid #1e293b;
-  border-radius: 20px;
-  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.45);
+  border-top: 1px solid #1e293b;
+  border-bottom: 1px solid #1e293b;
+}
+
+/* INNER CONTENT ALIGNMENT */
+.market-discipline .market-inner {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 /* MARKET HEADER */
@@ -127,8 +138,8 @@
 
 /* EMPHASIS QUOTE */
 .market-quote {
-  margin-top: 16px;
-  padding: 12px 14px;
+  margin-top: 18px;
+  padding: 14px 16px;
   border-left: 4px solid #38bdf8;
   background: rgba(56, 189, 248, 0.05);
   font-style: italic;
@@ -144,5 +155,9 @@
 
   .discipline-container h1 {
     font-size: 26px;
+  }
+
+  .market-discipline {
+    padding: 34px 18px;
   }
 }
