@@ -2,31 +2,20 @@
    HOME / INDEX PAGE
    =============================== */
 
-/* MAIN SCROLL (CRITICAL FIX) */
-.home-scroll {
-  flex: 1;
-  overflow-y: auto;
-  padding-bottom: 80px;
-  background: linear-gradient(180deg, #020617, #0f172a);
-  color: #e5e7eb;
-  min-height: 100vh;
-}
-
-/* HERO */
 .hero {
   text-align: center;
-  padding: 80px 20px 50px; /* reduced height */
+  padding: 80px 20px 50px;
 }
 
 .hero h1 {
-  font-size: 32px;         /* reduced size */
+  font-size: 32px;
   color: #38bdf8;
   margin-bottom: 10px;
 }
 
 .hero p {
   font-size: 15px;
-  color: #cbd5f5;          /* improved contrast */
+  color: #cbd5f5;
   opacity: 0.9;
 }
 
@@ -37,16 +26,14 @@
   border-top: 1px solid #1e293b;
   border-bottom: 1px solid #1e293b;
   margin-bottom: 60px;
-  background: transparent;
 }
 
 .start-label {
   font-size: 12px;
   letter-spacing: 1px;
-  opacity: 0.7;
+  color: #94a3b8;
   display: block;
   margin-bottom: 6px;
-  color: #94a3b8;
 }
 
 .start-here h2 {
@@ -73,16 +60,15 @@
 /* CARDS */
 .cards {
   max-width: 1100px;
-  margin: 0 auto 80px;
+  margin: 0 auto;
   padding: 0 24px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
-/* CARD */
 .card {
-  background: linear-gradient(180deg, #020617, #020617);
+  background: #020617;
   border: 1px solid #1e293b;
   border-radius: 14px;
   padding: 22px 20px;
@@ -101,7 +87,6 @@
 
 .card p {
   color: #e5e7eb;
-  opacity: 0.9;
   font-size: 14px;
   line-height: 1.5;
 }
@@ -110,7 +95,6 @@
   text-decoration: none;
 }
 
-/* MOBILE */
 @media (max-width: 900px) {
   .cards {
     grid-template-columns: 1fr;
