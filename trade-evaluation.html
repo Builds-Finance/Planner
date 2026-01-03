@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Trade Evaluation</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trade Evaluation | Kunal Finance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="trade-evaluation.css">
 </head>
 
-<body>
+<body class="dark">
 
 <header>
   <a href="index.html" class="logo">📊 Kunal Finance</a>
@@ -21,8 +23,76 @@
 <main>
   <div class="scroll-area">
 
-    <!-- EXISTING CONTENT (UNCHANGED) -->
-    <!-- Trade evaluation UI / form remains exactly same -->
+    <section class="card">
+      <h2>📌 Trade Context</h2>
+
+      <form id="tradeForm" class="form-grid">
+
+        <div class="form-group">
+          <label>Stock Name</label>
+          <input type="text" id="stock" placeholder="SBIN">
+        </div>
+
+        <div class="form-group">
+          <label>Timeframe</label>
+          <select id="timeframe">
+            <option>15 Min</option>
+            <option>5 Min</option>
+            <option>Daily</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Market Trend</label>
+          <select id="trend">
+            <option>Bullish</option>
+            <option>Bearish</option>
+            <option>Sideways</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Channel Break?</label>
+          <select id="channel">
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>RSI Condition</label>
+          <select id="rsi">
+            <option>Overbought</option>
+            <option>Oversold</option>
+            <option>Neutral</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Pivot Interaction</label>
+          <select id="pivot">
+            <option>Support</option>
+            <option>Resistance</option>
+            <option>None</option>
+          </select>
+        </div>
+
+        <div class="form-group full-width">
+          <label>Notes</label>
+          <textarea id="notes" rows="3" placeholder="Observations, price behavior, volume..."></textarea>
+        </div>
+
+        <div class="form-group full-width">
+          <button type="button" onclick="evaluateTrade()">Evaluate Trade</button>
+        </div>
+
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>📊 Evaluation Result</h2>
+      <pre id="result">Awaiting input...</pre>
+    </section>
 
   </div>
 </main>
