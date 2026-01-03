@@ -1,123 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Clean-Slate Intraday Execution Rulebook</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="common.css">
-  <link rel="stylesheet" href="financial-rules.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Clean-Slate Intraday Execution Rulebook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="financial-rules.css">
 </head>
 
 <body class="dark">
 
-<header>
-  <div class="logo">📊 Kunal Finance</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="financial-roadmap.html">Financial Roadmap</a>
-    <a href="trade-evaluation.html">Trade Evaluation</a>
-  </nav>
-</header>
+    <header>
+        <div class="logo">📊 Kunal Finance</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="financial-roadmap.html">Financial Roadmap</a>
+            <a href="trade-evaluation.html">Trade Evaluation</a>
+        </nav>
+    </header>
 
-<main>
-  <div class="scroll-area">
+    <main>
+        <div class="scroll-area">
+            <section class="rules-grid">
 
-    <h1 class="rulebook-title">
-      Clean-Slate Intraday Execution Rulebook
-      <span>(Non-Negotiable)</span>
-    </h1>
+                <!-- A -->
+                <div class="rule-tile">
+                    <h2>🧠 A. Mental Reset (Before Market)</h2>
+                    <ul>
+                        <li><strong>Today starts at ₹0 mental balance.</strong> No recovery, no compensation, no carry-over.</li>
+                        <li><strong>Past mistakes are acknowledged and closed.</strong> They do not travel into today’s trades.</li>
+                        <li><strong>My job is execution, not prediction.</strong></li>
+                    </ul>
+                </div>
 
-    <section class="rules-grid">
+                <!-- B -->
+                <div class="rule-tile">
+                    <h2>⏰ B. Time Discipline</h2>
+                    <ul>
+                        <li>No entries before <strong>10:00 AM</strong>.</li>
+                        <li>Buy-side entries allowed only until <strong>10:55 AM</strong>.</li>
+                        <li>Trades triggered before 10:00 AM are ignored or require extra confirmation.</li>
+                        <li>If a buy trade is not profitable by <strong>12:00 PM → focus only on exit</strong>.</li>
+                        <li>All option-selling trades after 12:00 PM must target only <strong>₹0.05–₹0.10</strong>.</li>
+                    </ul>
+                </div>
 
-      <!-- A -->
-      <div class="rule-tile">
-        <h2>🧠 A. Mental Reset (Before Market)</h2>
-        <ul>
-          <li><strong>Today starts at ₹0 mental balance.</strong> No recovery, no compensation, no carry-over.</li>
-          <li><strong>Past mistakes are acknowledged and closed.</strong> They do not travel into today’s trades.</li>
-          <li><strong>My job is execution, not prediction.</strong></li>
-        </ul>
-      </div>
+                <!-- C -->
+                <div class="rule-tile">
+                    <h2>📊 C. Mandatory Setup & Indicator Alignment</h2>
+                    <ul>
+                        <li><strong>ITM options only</strong>.</li>
+                        <li>15-min trend must be clear.</li>
+                        <li>Candle must NOT be:
+                            <ul>
+                                <li>Near or approaching Pivot</li>
+                                <li>Near or touching Bollinger Band</li>
+                                <li>Near or touching 50 DMA</li>
+                            </ul>
+                        </li>
+                        <li><strong>System setup confirmation is mandatory</strong>.</li>
+                        <li>Bollinger Bands + Pivot Levels must always be reviewed.</li>
+                        <li><strong>Missing even one confirmation = NO TRADE</strong>.</li>
+                    </ul>
+                </div>
 
-      <!-- B -->
-      <div class="rule-tile">
-        <h2>⏰ B. Time Discipline</h2>
-        <ul>
-          <li>No entries before <strong>9:55 AM</strong>.</li>
-          <li>Buy-side entries allowed only until <strong>10:55 AM</strong>.</li>
-          <li>If a buy trade is not profitable by <strong>12:00 PM → focus only on exit</strong>.</li>
-          <li>All option-selling trades after 12:00 PM must target only <strong>₹0.05–₹0.10</strong>.</li>
-        </ul>
-      </div>
+                <!-- D -->
+                <div class="rule-tile">
+                    <h2>🔁 D. Contra Trade Rules</h2>
+                    <ul>
+                        <li>Contra trades allowed only with <strong>strong OB / OS signals</strong>.</li>
+                        <li>RSI levels fixed at <strong>27 (Oversold) / 76 (Overbought)</strong>.</li>
+                        <li>Pivot point validation is mandatory.</li>
+                        <li>Entries must be taken in <strong>3 staggered legs</strong>.</li>
+                        <li>Exit plan must be predefined before entry.</li>
+                    </ul>
+                </div>
 
-      <!-- C -->
-      <div class="rule-tile">
-        <h2>📊 C. Setup Validation (All Must Align)</h2>
-        <ul>
-          <li><strong>ITM options only.</strong> No exceptions.</li>
-          <li>15-minute trend + pivot + Bollinger Bands + 50 DMA alignment required.</li>
-          <li>System Setup confirmation is mandatory.</li>
-          <li>Contra trades allowed only with <strong>strong overbought/oversold signals with Pivot point check</strong>.</li>
-          <li>For Contra trades start to accumulate from 27 / 76 RSI in 3 legs and wait until 1:30 PM for exit</li>
-        </ul>
-      </div>
 
-      <!-- D -->
-      <div class="rule-tile">
-        <h2>💰 D. Risk & Order Management</h2>
-        <ul>
-          <li>Maximum risk per script: <strong>₹15,000</strong>.</li>
-          <li>Exit orders must be placed immediately after entry.</li>
-          <li>Exit orders <strong>cannot be cancelled or widened</strong>.</li>
-        </ul>
-      </div>
+                <!-- E -->
+                <div class="rule-tile">
+                    <h2>💰 E. Risk & Order Management</h2>
+                    <ul>
+                        <li>Maximum risk per script: <strong>₹15,000</strong>.</li>
+                        <li>Exit orders must be placed immediately after entry.</li>
+                        <li>Exit orders <strong>cannot be cancelled or widened</strong>.</li>
+                    </ul>
+                </div>
 
-      <!-- E -->
-      <div class="rule-tile">
-        <h2>🛑 E. Execution Discipline</h2>
-        <ul>
-          <li>If the setup isn’t clean → <strong>I win by not trading</strong>.</li>
-          <li>If I feel emotional → <strong>entry is invalid</strong>.</li>
-          <li>After one clean exit, reassess calmly.</li>
-        </ul>
-      </div>
 
-      <!-- F -->
-      <div class="rule-tile">
-        <h2>⚖️ F. Performance Judgement</h2>
-        <ul>
-          <li>Rule-based loss = <strong>SUCCESS</strong>.</li>
-          <li>Rule-breaking profit = <strong>FAILURE</strong>.</li>
-          <li>I judge myself only on discipline, not P&amp;L.</li>
-        </ul>
-      </div>
+                <!-- F -->
+                <div class="rule-tile">
+                    <h2>📐 F. Channel Break Structure Rules</h2>
+                    <h3>What is the Channel Range - high and low of 15 mins first candle of the day</h3>
+                    <ul>
+                        <li>Trades allowed only after a <strong>fully completed channel break</strong>.</li>
+                        <li>Break is valid only after <strong>15-minute candle close</strong>.</li>
+                        <li>Wicks, mid-candle moves, or partial breaks are invalid.</li>
+                        <li>Trade direction is defined by which side of the channel breaks.</li>
+                        <li>After the channel is breaks the candle not be approaching or ready to touch any pivot level / Bollinger Band / 50 DMA line.</li>
+                    </ul>
+                </div>
 
-      <!-- G -->
-      <div class="rule-tile full-width">
-        <h2>🔱 Daily Recitation (Before First Trade)</h2>
-        <p>
-          <strong>
+                <!-- G -->
+                <div class="rule-tile">
+                    <h2>🧪 G. False Breakout Validation Rules</h2>
+                    <ul>
+                        <li>Every channel break must be checked for false breakout behavior.</li>
+                        <li>Entry only if price <strong>sustains beyond breakout level</strong>.</li>
+                        <li>If price action looks rushed, thin, or extended → <strong>wait or skip</strong>.</li>
+                        <li>Entry is taken on the <strong>next candle after confirmation</strong>, not on the breakout candle.</li>
+                    </ul>
+                </div>
+
+                <!-- H -->
+                <div class="rule-tile">
+                    <h2>➗ H. Averaging Discipline Rules</h2>
+                    <ul>
+                        <li>Averaging allowed only at <strong>system-defined price levels</strong>.</li>
+                        <li>Manual, emotional, or early averaging is strictly prohibited.</li>
+                        <li>Even partial-lot averaging before the planned level is a <strong>rule violation</strong>.</li>
+                    </ul>
+                </div>
+
+                <!-- I -->
+                <div class="rule-tile">
+                    <h2>🛑 I. Execution Discipline</h2>
+                    <ul>
+                        <li>If the setup isn’t clean → <strong>I win by not trading</strong>.</li>
+                        <li>If I feel emotional → <strong>entry is invalid</strong>.</li>
+                        <li>After one clean exit, reassess calmly.</li>
+                    </ul>
+                </div>
+
+                <!-- J -->
+                <div class="rule-tile">
+                    <h2>⚖️ J. Performance Judgement</h2>
+                    <ul>
+                        <li>Rule-based loss = <strong>SUCCESS</strong>.</li>
+                        <li>Rule-breaking profit = <strong>FAILURE</strong>.</li>
+                        <li>I judge myself only on discipline, not P&amp;L.</li>
+                    </ul>
+                </div>
+
+                <!-- K (FULL WIDTH) -->
+                <div class="rule-tile full-width">
+                    <h2 class="glow-title">🔱 Daily Recitation (Before First Trade)</h2>
+                    <p class="recitation glow-text">
+                        <strong>
             “I start today with a clean slate.<br>
             I do not trade to recover, prove, or impress.<br>
             I wait for clarity, I respect risk, and I follow my rules.<br>
+            I will not override this system today.<br>
             My duty is disciplined execution — results will follow.”
           </strong>
-        </p>
-      </div>
+                    </p>
+                </div>
 
-    </section>
+            </section>
 
-    <div class="footer-note">
-      Discipline over emotion • Process over outcome
-    </div>
+        </div>
+    </main>
 
-  </div>
-</main>
-
-<footer>
-  © 2025 Kunal Finance. All rights reserved.
-</footer>
+    <footer>
+        © 2025 Kunal Finance. All rights reserved.
+    </footer>
 
 </body>
+
 </html>
