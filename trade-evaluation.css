@@ -1,23 +1,37 @@
 /* ===============================
-   TRADE EVALUATION – PREMIUM UI
+   TRADE EVALUATION – CLEAN SCROLL FIX
    =============================== */
 
 body.dark {
-  background: radial-gradient(
+  background:
+    radial-gradient(
       1200px 600px at 10% 10%,
       rgba(56, 189, 248, 0.06),
       transparent 40%
     ),
     linear-gradient(180deg, #020617 0%, #020617 100%);
   color: #e5e7eb;
+
+  /* IMPORTANT */
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
-/* MAIN SCROLL AREA */
+/* MAIN AREA — NO INNER SCROLL */
+main {
+  width: 100%;
+  padding-top: 96px;   /* header height safety */
+  padding-bottom: 96px; /* footer height safety */
+}
+
+/* CONTENT WRAPPER */
 .scroll-area {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 48px 24px 120px;
+  padding: 48px 24px;
+
+  /* REMOVE SCROLL BEHAVIOR */
+  overflow: visible;
   display: flex;
   flex-direction: column;
   gap: 36px;
@@ -35,10 +49,9 @@ body.dark {
   border-radius: 16px;
   padding: 28px 30px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
-  overflow: hidden;
 }
 
-/* FADING BLUE LEFT LINE */
+/* FADING BLUE LEFT LINE (PERFECT MATCH) */
 .card::before {
   content: "";
   position: absolute;
@@ -50,8 +63,8 @@ body.dark {
   background: linear-gradient(
     180deg,
     transparent,
-    #38bdf8,
-    rgba(56, 189, 248, 0.4),
+    rgba(56, 189, 248, 0.9),
+    rgba(56, 189, 248, 0.35),
     transparent
   );
 }
@@ -139,7 +152,7 @@ textarea {
   color: #94a3b8;
 }
 
-/* OPEN CHATGPT LINK */
+/* OPEN CHATGPT */
 .open-chatgpt {
   display: inline-block;
   margin-top: 8px;
@@ -159,6 +172,6 @@ textarea {
   }
 
   .scroll-area {
-    padding: 36px 16px 120px;
+    padding: 32px 16px;
   }
 }
