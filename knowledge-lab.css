@@ -1,26 +1,121 @@
 /* ===============================
-   KNOWLEDGE LAB
+   KNOWLEDGE LAB – PREMIUM STYLE
    =============================== */
 
-.lab-container {
-  max-width: 900px;
+.lab-page {
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 40px 24px 80px;
 }
 
-.lab-container h1,
-.lab-container h2 {
+/* HEADER */
+.lab-header {
+  margin-bottom: 40px;
+}
+
+.lab-header h1 {
+  font-size: 34px;
   color: #38bdf8;
+  margin-bottom: 6px;
 }
 
-.lab-container p,
-.lab-container li {
-  color: #e5e7eb;
-  line-height: 1.6;
+.lab-header p {
+  color: #94a3b8;
+  font-size: 14px;
+  opacity: 0.9;
 }
 
-.note-box {
-  background: #020617;
+/* GRID */
+.lab-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* CARD */
+.lab-card {
+  position: relative;
+  background: linear-gradient(180deg, #020617, #020617);
   border: 1px solid #1e293b;
-  border-radius: 12px;
-  padding: 18px;
+  border-radius: 18px;
+  padding: 22px 22px 20px 26px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* FADING BLUE LINE (LEFT) */
+.lab-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  bottom: 14px;
+  width: 3px;
+  border-radius: 4px;
+  background: linear-gradient(
+    180deg,
+    rgba(56, 189, 248, 0.9),
+    rgba(56, 189, 248, 0.2),
+    rgba(56, 189, 248, 0)
+  );
+}
+
+/* HOVER */
+.lab-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* TITLES */
+.lab-card h2 {
+  font-size: 18px;
+  color: #38bdf8;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* LIST */
+.lab-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px;
+}
+
+.lab-card li {
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: 8px;
+  color: #e5e7eb;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.lab-card li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #38bdf8;
+  opacity: 0.8;
+}
+
+/* FOOT NOTE */
+.lab-note {
+  display: block;
+  font-size: 12px;
+  color: #94a3b8;
+  opacity: 0.85;
+  margin-top: 6px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .lab-page {
+    padding: 30px 16px 70px;
+  }
+
+  .lab-header h1 {
+    font-size: 28px;
+  }
 }
