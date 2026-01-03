@@ -10,14 +10,14 @@
 
 html, body {
   height: 100%;
-  background: #020617; /* Global dark background */
+  background: #020617;
   color: #e5e7eb;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  overflow: hidden; /* IMPORTANT: prevent body scroll */
+  overflow: hidden; /* 🔒 only inner scroll allowed */
 }
 
 /* ===============================
-   APP LAYOUT STRUCTURE
+   APP LAYOUT
    =============================== */
 
 body {
@@ -31,7 +31,7 @@ body {
 
 header {
   height: 64px;
-  background: linear-gradient(180deg, #020617, #020617);
+  background: #020617;
   border-bottom: 1px solid #1e293b;
   display: flex;
   align-items: center;
@@ -41,9 +41,9 @@ header {
 }
 
 header .logo {
-  font-weight: 600;
   color: #38bdf8;
   text-decoration: none;
+  font-weight: 600;
   font-size: 16px;
 }
 
@@ -56,25 +56,25 @@ header nav a {
 }
 
 header nav a:hover {
-  opacity: 1;
   color: #38bdf8;
+  opacity: 1;
 }
 
 /* ===============================
-   MAIN CONTENT (SCROLL AREA)
+   MAIN (SCROLL LOCK)
    =============================== */
 
 main {
   flex: 1;
-  overflow: hidden; /* lock scroll to inner container */
+  overflow: hidden;
   display: flex;
 }
 
-/* This is the ONLY scrolling container */
+/* ONLY scrollable area */
 .scroll-area {
   flex: 1;
   overflow-y: auto;
-  padding-bottom: 80px;
+  padding: 40px 24px 80px;
 }
 
 /* ===============================
@@ -83,7 +83,7 @@ main {
 
 footer {
   height: 56px;
-  background: linear-gradient(180deg, #020617, #020617);
+  background: #020617;
   border-top: 1px solid #1e293b;
   display: flex;
   align-items: center;
