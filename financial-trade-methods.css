@@ -1,94 +1,27 @@
-/* ===== PAGE BODY (WRAPS SCROLL AREA) ===== */
-.page-body {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  min-height: 0; /* CRITICAL: allows inner scrolling */
-}
+/* ===============================
+   TRADE METHODS
+   =============================== */
 
-/* ===== ONLY THIS AREA SCROLLS ===== */
-.scroll-area {
-  flex: 1;
-  overflow-y: auto;
-  padding: 20px;
-
-  /* Reserve space for footer */
-  max-height: calc(100vh - 64px - 48px - 56px);
-}
-
-/* Optional: cleaner scrollbar */
-.scroll-area::-webkit-scrollbar {
-  width: 8px;
-}
-
-.scroll-area::-webkit-scrollbar-thumb {
-  background: #1e293b;
-  border-radius: 6px;
-}
-
-.scroll-area::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-/* ===== GRID LAYOUT ===== */
 .methods-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
 }
 
-/* ===== METHOD CARD ===== */
 .method-card {
   background: #020617;
   border: 1px solid #1e293b;
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 22px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-  display: flex;
-  flex-direction: column;
 }
 
-/* ===== METHOD TITLES ===== */
 .method-card h2 {
-  font-size: 15px;
-  margin: 0 0 12px;
-  padding-left: 10px;
-  border-left: 3px solid #38bdf8;
-  color: #e5e7eb;
+  color: #38bdf8;
+  margin-bottom: 10px;
 }
 
-/* ===== SUB HEADINGS ===== */
-.method-card h3 {
-  font-size: 14px;
-  margin: 14px 0 6px;
-  color: #e5e7eb;
-}
-
-/* ===== LISTS ===== */
-.method-card ul {
-  padding-left: 18px;
-  margin: 0;
-}
-
+.method-card p,
 .method-card li {
-  font-size: 14px;
-  line-height: 1.5;
-  margin-bottom: 6px;
-  color: #cbd5f5;
-}
-
-/* ===== PHILOSOPHY NOTE ===== */
-.method-note {
-  margin-top: auto;
-  font-size: 13px;
-  font-style: italic;
-  opacity: 0.8;
-  padding-top: 10px;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 1100px) {
-  .methods-grid {
-    grid-template-columns: 1fr;
-  }
+  color: #e5e7eb;
+  line-height: 1.6;
 }
