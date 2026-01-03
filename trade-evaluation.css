@@ -1,6 +1,5 @@
 /* =====================================================
-   TRADE EVALUATION – PREMIUM UI
-   Matches Rules / Discipline / Methods pages
+   TRADE EVALUATION – KNOWLEDGE LAB STYLE
    ===================================================== */
 
 /* ---------- PAGE SCROLL AREA ---------- */
@@ -8,33 +7,53 @@
   height: calc(100vh - 120px); /* header + footer */
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 36px 0 50px;
+  padding: 40px 0 60px;
 }
 
-/* ---------- CENTERED WRAPPER ---------- */
+/* ---------- MAIN CONTAINER ---------- */
 .trade-evaluation-container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
+}
+
+/* ---------- SECTION TITLE ---------- */
+.trade-page-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #63d3ff;
+  margin-bottom: 6px;
+}
+
+.trade-page-subtitle {
+  font-size: 14px;
+  color: #8fa9bf;
+  margin-bottom: 28px;
+}
+
+/* ---------- CARD GRID ---------- */
+.trade-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 26px;
 }
 
 /* ---------- CARD BASE ---------- */
 .trade-card {
   position: relative;
   background: radial-gradient(
-    140% 120% at 0% 0%,
-    rgba(0, 180, 255, 0.10),
-    rgba(0, 0, 0, 0.88)
+    140% 140% at 0% 0%,
+    rgba(0, 170, 255, 0.10),
+    rgba(0, 0, 0, 0.90)
   );
   border-radius: 18px;
-  padding: 28px 30px 30px;
-  margin-bottom: 28px;
+  padding: 26px 28px 28px;
   box-shadow:
     inset 0 0 0 1px rgba(255, 255, 255, 0.06),
-    0 18px 48px rgba(0, 0, 0, 0.65);
+    0 22px 55px rgba(0, 0, 0, 0.7);
 }
 
-/* ---------- FADING BLUE LINE ---------- */
+/* ---------- FADED BLUE LINE ---------- */
 .trade-card::before {
   content: "";
   position: absolute;
@@ -46,34 +65,33 @@
   background: linear-gradient(
     180deg,
     rgba(0, 200, 255, 0),
-    rgba(0, 200, 255, 0.9),
+    rgba(0, 200, 255, 0.85),
     rgba(0, 200, 255, 0)
   );
 }
 
-/* ---------- HEADERS ---------- */
-.trade-card h2 {
+/* ---------- CARD HEAD ---------- */
+.trade-card h3 {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   color: #5fd0ff;
-  margin-bottom: 22px;
-}
-
-/* ---------- GRID ---------- */
-.trade-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px 22px;
   margin-bottom: 18px;
 }
 
-/* ---------- LABELS ---------- */
+/* ---------- FORM GRID ---------- */
+.trade-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px 20px;
+}
+
+/* ---------- LABEL ---------- */
 .trade-label {
   font-size: 13px;
-  color: #9bb7cc;
+  color: #9ab3c8;
   margin-bottom: 6px;
 }
 
@@ -86,8 +104,8 @@ textarea {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 10px;
   padding: 10px 14px;
-  color: #eaf6ff;
   font-size: 14px;
+  color: #eaf6ff;
   outline: none;
 }
 
@@ -98,7 +116,7 @@ textarea:focus {
   box-shadow: 0 0 0 2px rgba(0, 200, 255, 0.15);
 }
 
-/* ---------- BUTTON ---------- */
+/* ---------- ACTION BUTTON ---------- */
 .trade-button {
   display: inline-flex;
   align-items: center;
@@ -108,26 +126,27 @@ textarea:focus {
     rgba(0, 190, 255, 0.95),
     rgba(0, 120, 200, 0.95)
   );
-  color: #00141f;
+  color: #00131f;
   border: none;
   border-radius: 12px;
-  padding: 12px 18px;
+  padding: 12px 20px;
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.25s ease;
+  margin-top: 14px;
 }
 
 .trade-button:hover {
   transform: translateY(-1px);
-  box-shadow: 0 12px 34px rgba(0, 190, 255, 0.45);
+  box-shadow: 0 14px 38px rgba(0, 190, 255, 0.45);
 }
 
 /* ---------- HELPER TEXT ---------- */
 .trade-helper {
   margin-top: 10px;
   font-size: 13px;
-  color: #8ea9be;
+  color: #8fa9bf;
 }
 
 /* ---------- GENERATED PROMPT ---------- */
@@ -139,12 +158,12 @@ textarea:focus {
   font-size: 13px;
   line-height: 1.65;
   color: #d9edff;
-  max-height: 340px;
+  max-height: 360px;
   overflow-y: auto;
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* ---------- LINK ---------- */
+/* ---------- PROMPT LINKS ---------- */
 .generated-prompt-box a {
   color: #6fd6ff;
   text-decoration: none;
@@ -154,7 +173,7 @@ textarea:focus {
   text-decoration: underline;
 }
 
-/* ---------- SCROLLBAR (LOCAL ONLY) ---------- */
+/* ---------- SCROLLBAR (LOCAL) ---------- */
 .trade-evaluation-page::-webkit-scrollbar {
   width: 10px;
 }
