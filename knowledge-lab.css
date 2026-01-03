@@ -1,71 +1,26 @@
-/* ===== PAGE ===== */
-.lab-page {
-  padding: 40px 30px 80px;
+/* ===============================
+   KNOWLEDGE LAB
+   =============================== */
+
+.lab-container {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-/* ===== HEADER ===== */
-.lab-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.lab-header h1 {
-  font-size: 32px;
+.lab-container h1,
+.lab-container h2 {
   color: #38bdf8;
-  margin-bottom: 6px;
 }
 
-.lab-header p {
-  opacity: 0.8;
+.lab-container p,
+.lab-container li {
+  color: #e5e7eb;
+  line-height: 1.6;
 }
 
-/* ===== GRID ===== */
-.lab-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-}
-
-/* ===== CARD ===== */
-.lab-card {
+.note-box {
   background: #020617;
   border: 1px solid #1e293b;
-  border-radius: 16px;
-  padding: 22px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.lab-card h2 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #38bdf8;
-}
-
-.lab-card ul {
-  padding-left: 18px;
-  margin: 0 0 12px;
-}
-
-.lab-card li {
-  margin-bottom: 6px;
-  opacity: 0.9;
-}
-
-.lab-note {
-  font-size: 12px;
-  opacity: 0.6;
-  font-style: italic;
-}
-
-/* ===== HOVER ===== */
-.lab-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
-}
-
-/* ===== MOBILE ===== */
-@media (max-width: 768px) {
-  .lab-header h1 {
-    font-size: 26px;
-  }
+  border-radius: 12px;
+  padding: 18px;
 }
