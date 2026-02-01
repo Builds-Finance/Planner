@@ -26,42 +26,55 @@
         <div class="scroll-area">
 
             <div class="discipline-grid">
-
-                <!-- 🌙 Night Discipline -->
                 <div class="discipline-card">
+
                     <h1>Cash Generation & Diversification Strategy</h1>
 
-                    <h2>Action Points</h2>
+                    <!-- 🔹 Strategy Snapshot -->
+                    <h2>Strategy Snapshot</h2>
                     <ul>
-                        <li>Keep capital of <strong>₹7 Lakh</strong> for cash generation initially.</li>
-                        <li>Option selling positions to be taken <strong>based on Greeks</strong>.</li>
-                        <li>Target takeaway: <strong>5% – 6%</strong> on invested capital from option selling.</li>
-                        <li>Cash generation on ₹7 Lakh is <strong>₹49,000</strong>.</li>
-                        <li>With <strong>₹28 Lakh</strong>, cash generation would be <strong>₹2 Lakh</strong>.</li>
-                        <li>Pledging to be stopped post <strong>June 2027 (first birthday)</strong>.</li>
-                        <li>Cash generation to be done <strong>only with available collateral</strong>.</li>
+                        <li>Capital Deployed: <strong>₹35 Lakh</strong> (₹28 Lakh collateral after haircut)</li>
+                        <li>Cash Generation Method: <strong>Options Selling (Greeks-based)</strong></li>
+                        <li>Monthly Cash Target: <strong>₹2 Lakh</strong></li>
+                        <li>Return Expectation: <strong>5% – 6%</strong> on deployed capital</li>
+                        <li>Cash Cap Rule: <strong>Do not exceed ₹2 Lakh</strong></li>
+                        <li>Overflow Route: <strong>InvIT (PowerGrid)</strong></li>
+                    </ul>
+
+                    <!-- 🔒 Capital & Risk Rules -->
+                    <h2>Capital & Risk Rules (Non-Negotiable)</h2>
+                    <ul>
+                        <li>Initial cash generation capital: <strong>₹7 Lakh</strong></li>
+                        <li>All option selling trades must be <strong>Greeks-qualified</strong></li>
+                        <li>Cash generation strictly via <strong>available collateral</strong></li>
+                        <li>₹7 Lakh cash generation ≈ <strong>₹49,000</strong></li>
+                        <li>₹28 Lakh cash generation ≈ <strong>₹2 Lakh</strong></li>
+                        <li>Pledging stops post <strong>June 2027 (first birthday)</strong></li>
                         <li>
-                            <strong>₹35 Lakh invested with 20% haircut</strong> gives
-                            <strong>₹28 Lakh collateral</strong> to generate <strong>₹2 Lakh per month</strong>.
+                            <strong>₹35 Lakh investment</strong> with 20% haircut gives
+                            <strong>₹28 Lakh collateral</strong> to generate
+                            <strong>₹2 Lakh per month</strong>
                         </li>
                     </ul>
 
+                    <!-- 🧾 Greeks Checklist -->
                     <h2>Final “GO / NO-GO” Checklist (As per Greeks)</h2>
+                    <p><strong>Trades are allowed only if all mandatory conditions are met.</strong></p>
 
                     <div class="box success">
-                        <h3>✅ Iron Condor — Take only if:</h3>
+                        <h3>✅ Iron Condor — Low Monitoring</h3>
                         <ul>
                             <li>Delta between <strong>-20 to +20</strong></li>
                             <li>Theta <strong>≥ 20</strong></li>
                             <li>Gamma <strong>&lt; 1</strong></li>
                             <li>Vega <strong>negative</strong></li>
-                            <li>Price <strong>between short strikes</strong></li>
+                            <li>Price between <strong>short strikes</strong></li>
                             <li>No major event ahead</li>
                         </ul>
                     </div>
 
                     <div class="box warning">
-                        <h3>⚠️ Iron Fly — Take only if:</h3>
+                        <h3>⚠️ Iron Fly — High Monitoring</h3>
                         <ul>
                             <li>Delta between <strong>-10 to +10</strong></li>
                             <li>Theta <strong>≥ 60</strong></li>
@@ -72,49 +85,48 @@
                         </ul>
                     </div>
 
-                    <h2>Prompt</h2>
+                    <!-- 🧠 Analysis Command -->
+                    <h2>Analysis Command</h2>
                     <p>
-                        <code>Analyse NIFTY / BANKNIFTY / XYZ stock for next expiry using saved Greeks rules</code>
+                        <code>
+            Analyse NIFTY / BANKNIFTY / XYZ for next expiry
+            using saved Greeks rules
+        </code>
                     </p>
-                    <p>
-                        Example: Analyse <strong>HDFC Bank</strong> stock for next expiry using saved Greeks rules.
-                    </p>
+                    <p>Example: Analyse <strong>HDFC Bank</strong> for next expiry using saved Greeks rules.</p>
 
-                    <h2>Pledging Rules</h2>
+                    <!-- 🔁 Pledging Logic -->
+                    <h2>Pledging Logic</h2>
                     <ul>
-                        <li>Continue pledging until cash generation target of <strong>₹2 Lakh per month</strong> is reached.</li>
-                        <li>If ₹2 Lakh per month is achieved with ₹35 Lakh investment:
-                            <ul>
-                                <li>Stop pledging</li>
-                                <li>Focus only on compounding using the diversification calculator</li>
-                            </ul>
-                        </li>
-                        <li>Do not generate cash above <strong>₹2 Lakh</strong> from option selling.</li>
-                        <li>Additional cash generation to be done using <strong>InvIT</strong>.</li>
+                        <li>If monthly cash &lt; <strong>₹2 Lakh</strong> → Continue pledging</li>
+                        <li>If monthly cash = <strong>₹2 Lakh</strong> → Stop pledging</li>
+                        <li>After stopping → Only compound via diversification</li>
+                        <li><strong>Cash generation from options must never exceed ₹2 Lakh</strong></li>
+                        <li>Additional cash generation to be routed via <strong>InvIT</strong></li>
                     </ul>
 
-                    <h2>Monthly Investment Plan</h2>
+                    <!-- 📅 Monthly Execution -->
+                    <h2>Monthly Investment Execution</h2>
+
+                    <h3>📥 Monthly Inflows</h3>
                     <ul>
-                        <li>From <strong>1 March onwards</strong>, every month:
-                            <ul>
-                                <li>Buy distributed investments of approximately <strong>₹2 Lakh + cash generation amount</strong></li>
-                            </ul>
-                        </li>
-                        <li>Passive income source: <strong>InvIT (PowerGrid)</strong></li>
-                        <li>Target passive income: <strong>₹2 Lakh</strong></li>
-                        <li>
-                            Make a note:
-                            <ul>
-                                <li>When InvIT compounding should be stopped</li>
-                                <li>Based on dividend received of <strong>₹2 Lakh</strong></li>
-                            </ul>
-                        </li>
+                        <li>Options cash generation (capped at <strong>₹2 Lakh</strong>)</li>
                     </ul>
 
-                    <h2>Web Pages to Be Created</h2>
+                    <h3>📤 Monthly Deployment</h3>
+                    <ul>
+                        <li>Distributed buying: <strong>₹2 Lakh + cash generation</strong></li>
+                        <li>Passive income vehicle: <strong>InvIT (PowerGrid)</strong></li>
+                        <li>Passive income target: <strong>₹2 Lakh</strong></li>
+                    </ul>
 
-                    <h3>1. Diversification Plan Page</h3>
-                    <p>Create a web page to display the full diversification plan.</p>
+                    <p><strong>InvIT compounding stops once dividend income reaches ₹2 Lakh.</strong></p>
+
+                    <!-- 🧭 System Modules -->
+                    <h2>System Modules</h2>
+
+                    <h3>1. Diversification Plan</h3>
+                    <p>Long-term asset allocation and compounding strategy.</p>
 
                     <h4>Revised Allocation (From February onward)</h4>
                     <ul>
@@ -125,28 +137,30 @@
                         <li>REIT – <strong>10%</strong></li>
                     </ul>
 
-                    <h3>2. Cash Generation Page</h3>
+                    <h3>2. Cash Generation Engine</h3>
                     <ul>
                         <li>Complete Greeks-based strategy</li>
-                        <li>Detailed prompt (full plan)</li>
-                        <li>Cash generation in terms of <strong>multiple</strong></li>
-                        <li><strong>5–6%</strong> takeaway</li>
+                        <li>Detailed execution prompt</li>
+                        <li>Cash generation tracked in terms of <strong>multiple</strong></li>
+                        <li><strong>5–6%</strong> takeaway rule</li>
                     </ul>
 
                     <h3>3. Diversification Calculator</h3>
-                    <p>To be used every month.</p>
+                    <p>Execution tool to be used every month.</p>
 
                     <h4>Inputs</h4>
                     <ul>
                         <li>Amount</li>
-                        <li>Current price of each item</li>
+                        <li>Current price of each asset</li>
                     </ul>
 
                     <h4>Output</h4>
                     <ul>
-                        <li>Units to be purchased for each asset based on percentage allocation</li>
+                        <li>Units to be purchased based on percentage allocation</li>
                     </ul>
+
                 </div>
+
             </div>
         </div>
     </main>
