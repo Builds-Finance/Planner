@@ -1,115 +1,117 @@
 /* ================================
-   NOTES PAGE – CARD-BASED SYSTEM
-   Aligned with Financial Trade Methods
+   NOTES PAGE – DARK THEME COLORS
 ================================ */
 
-/* Grid Layout */
+/* Grid */
 .methods-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 24px;
-    padding: 20px;
+    gap: 28px;
+    padding: 24px;
 }
 
-/* Card Base */
+/* Card */
 .method-card {
-    background: #ffffff;
-    border-radius: 14px;
-    padding: 22px 24px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-    border: 1px solid #eaeaea;
+    background: linear-gradient(
+        180deg,
+        #0f172a,
+        #020617
+    );
+    border-radius: 16px;
+    padding: 26px 28px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .method-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.09);
+    transform: translateY(-6px);
+    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.6);
 }
 
-/* Card Headings */
+/* Headings */
 .method-card h2 {
-    font-size: 1.25rem;
-    margin-bottom: 14px;
-    color: #1f2937;
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+    color: #e5e7eb;
 }
 
 .method-card h3 {
     font-size: 1.05rem;
-    margin-top: 18px;
+    margin-top: 22px;
     margin-bottom: 10px;
-    color: #374151;
+    color: #c7d2fe;
 }
 
 .method-card h4 {
     font-size: 0.95rem;
     margin-top: 14px;
-    margin-bottom: 6px;
-    color: #4b5563;
+    margin-bottom: 8px;
+    color: #93c5fd;
 }
 
 /* Lists */
 .method-card ul {
     padding-left: 18px;
-    margin: 8px 0 14px;
+    margin: 10px 0 16px;
 }
 
 .method-card ul li {
-    margin-bottom: 6px;
-    line-height: 1.55;
-    color: #374151;
+    margin-bottom: 8px;
+    line-height: 1.6;
+    color: #d1d5db;
 }
 
-/* Inline Code / Prompt */
+/* Strong text */
+.method-card strong {
+    color: #f9fafb;
+    font-weight: 600;
+}
+
+/* Inline Code */
 .method-card code {
     display: block;
-    background: #f3f4f6;
-    padding: 10px 12px;
-    border-radius: 8px;
-    font-family: "Courier New", monospace;
+    background: #020617;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 12px 14px;
+    border-radius: 10px;
+    font-family: "JetBrains Mono", monospace;
     font-size: 0.9rem;
-    margin: 10px 0;
-    color: #111827;
+    color: #e5e7eb;
+    margin: 12px 0;
 }
 
-/* Notes / Philosophy Line */
+/* Notes / Philosophy */
 .method-note {
-    margin-top: 16px;
-    padding-top: 10px;
+    margin-top: 20px;
+    padding-top: 12px;
     font-size: 0.9rem;
     font-style: italic;
-    color: #6b7280;
-    border-top: 1px dashed #d1d5db;
+    color: #9ca3af;
+    border-top: 1px dashed rgba(255, 255, 255, 0.15);
 }
 
-/* Utility Boxes (Used in Cash Gen Model) */
-.box {
-    padding: 14px 16px;
-    border-radius: 10px;
-    margin: 14px 0;
+/* Accent by card position */
+.method-card:nth-child(1) h2 {
+    color: #22d3ee; /* Cash Gen */
 }
 
-.box.success {
-    background: #ecfdf5;
-    border: 1px solid #a7f3d0;
+.method-card:nth-child(2) h2 {
+    color: #60a5fa; /* Monthly Plan */
 }
 
-.box.warning {
-    background: #fff7ed;
-    border: 1px solid #fed7aa;
+.method-card:nth-child(3) h2 {
+    color: #fbbf24; /* InvIT */
 }
 
-/* Responsive Fine-Tuning */
-@media (max-width: 600px) {
+/* Responsive */
+@media (max-width: 640px) {
     .methods-grid {
-        padding: 14px;
-        gap: 16px;
+        padding: 16px;
+        gap: 18px;
     }
 
     .method-card {
-        padding: 18px 18px;
-    }
-
-    .method-card h2 {
-        font-size: 1.15rem;
+        padding: 20px 20px;
     }
 }
