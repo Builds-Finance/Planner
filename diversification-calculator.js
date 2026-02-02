@@ -6,7 +6,8 @@ function calculateUnits() {
         mid: Number(document.getElementById("priceMid").value),
         junior: Number(document.getElementById("priceJunior").value),
         invit: Number(document.getElementById("priceInvit").value),
-        reit: Number(document.getElementById("priceReit").value)
+        reit1: Number(document.getElementById("priceReit1").value),
+        reit2: Number(document.getElementById("priceReit2").value)
     };
 
     const allocation = {
@@ -14,7 +15,8 @@ function calculateUnits() {
         mid: 0.25,
         junior: 0.15,
         invit: 0.10,
-        reit: 0.10
+        reit1: 0.05,
+        reit2: 0.05
     };
 
     let outputHtml = "";
