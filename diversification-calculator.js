@@ -24,9 +24,9 @@ function calculateUnits() {
     };
 
     const allocation = {
-        nifty: 0.40,
-        mid: 0.25,
-        junior: 0.15,
+        nifty: 0.30,
+        mid: 0.30,
+        junior: 0.20,
         invit: 0.10,
         reit1: 0.05,
         reit2: 0.05
