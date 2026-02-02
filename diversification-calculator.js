@@ -1,13 +1,26 @@
+function getNumber(id) {
+    const el = document.getElementById(id);
+    if (!el || el.value === "") return null;
+    return Number(el.value);
+}
+
 function calculateUnits() {
-    const amount = Number(document.getElementById("totalAmount").value);
+
+    const amount = getNumber("totalAmount");
+
+    if (!amount || amount <= 0) {
+        document.getElementById("resultOutput").innerHTML =
+            "<li><strong>Error:</strong> Please enter a valid total investment amount.</li>";
+        return;
+    }
 
     const prices = {
-        nifty: Number(document.getElementById("priceNifty").value),
-        mid: Number(document.getElementById("priceMid").value),
-        junior: Number(document.getElementById("priceJunior").value),
-        invit: Number(document.getElementById("priceInvit").value),
-        reit1: Number(document.getElementById("priceReit1").value),
-        reit2: Number(document.getElementById("priceReit2").value)
+        nifty: getNumber("priceNifty"),
+        mid: getNumber("priceMid"),
+        junior: getNumber("priceJunior"),
+        invit: getNumber("priceInvit"),
+        reit1: getNumber("priceReit1"),
+        reit2: getNumber("priceReit2") // optional
     };
 
     const allocation = {
@@ -20,15 +33,19 @@ function calculateUnits() {
     };
 
     let outputHtml = "";
+    let totalAllocated = 0;
 
     for (const key in allocation) {
-        if (!prices[key] || prices[key] <= 0) {
-            outputHtml += `<li>${key.toUpperCase()}: Invalid price</li>`;
+
+        if (prices[key] === null || prices[key] <= 0) {
+            outputHtml += `<li><strong>${key.toUpperCase()}</strong>: Skipped (no price)</li>`;
             continue;
         }
 
         const investAmount = amount * allocation[key];
         const units = Math.floor(investAmount / prices[key]);
+
+        totalAllocated += units * prices[key];
 
         outputHtml += `
             <li>
@@ -37,6 +54,14 @@ function calculateUnits() {
             </li>
         `;
     }
+
+    const leftover = amount - totalAllocated;
+
+    outputHtml += `
+        <li style="margin-top:8px;color:#9ca3af;">
+            <strong>Unallocated Cash:</strong> ₹${leftover.toFixed(0)}
+        </li>
+    `;
 
     document.getElementById("resultOutput").innerHTML = outputHtml;
 }
