@@ -3,34 +3,82 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>5-Year Financial Roadmap (2026–2031) | Kunal Finance</title>
+    <title>Diversification Calculator | Kunal Finance</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Core site styles -->
     <link rel="stylesheet" href="common.css">
+
+    <!-- Page-specific styles -->
     <link rel="stylesheet" href="diversification-calculator.css">
 </head>
 
 <body>
 
-    <header>
-        <a href="index.html" class="logo">📊 Kunal Finance</a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="financial-roadmap.html">Financial Roadmap</a>
-            <a href="trade-evaluation.html">Trade Evaluation</a>
-            <a href="notes.html">Notes</a>
-        </nav>
-    </header>
+<header>
+    <a href="index.html" class="logo">📊 Kunal Finance</a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="financial-roadmap.html">Financial Roadmap</a>
+        <a href="trade-evaluation.html">Trade Evaluation</a>
+        <a href="notes.html">Notes</a>
+    </nav>
+</header>
 
-    <main>
-        <div class="scroll-area">
-                    </div>
-    </main>
+<main>
+    <div class="scroll-area">
 
-    <footer>
-        © 2025 Kunal Finance. All rights reserved.
-    </footer>
+        <section class="calculator-wrapper">
+
+            <div class="calculator-card">
+                <h1>🧮 Diversification Calculator</h1>
+                <p class="subtitle">
+                    To be used every month for disciplined capital deployment.
+                </p>
+
+                <h2>Input</h2>
+
+                <label>Total Investment Amount (₹)</label>
+                <input type="number" id="totalAmount" placeholder="e.g. 200000">
+
+                <label>NIFTY BEES – Current Price</label>
+                <input type="number" id="priceNifty" placeholder="e.g. 250">
+
+                <label>MID – Current Price</label>
+                <input type="number" id="priceMid" placeholder="e.g. 140">
+
+                <label>JUNIOR – Current Price</label>
+                <input type="number" id="priceJunior" placeholder="e.g. 120">
+
+                <label>InvIT / REIT – Current Price</label>
+                <input type="number" id="priceInvit" placeholder="e.g. 100">
+
+                <label>REIT – Current Price</label>
+                <input type="number" id="priceReit" placeholder="e.g. 95">
+
+                <button onclick="calculateUnits()">Calculate Units</button>
+
+                <h2>Output</h2>
+                <ul id="resultOutput">
+                    <li>Enter values and click calculate</li>
+                </ul>
+
+                <p class="calculator-note">
+                    Philosophy: Allocation first. Discipline over emotion.
+                </p>
+            </div>
+
+        </section>
+
+    </div>
+</main>
+
+<footer>
+    © 2025 Kunal Finance. All rights reserved.
+</footer>
+
+<!-- Page-specific logic -->
+<script src="diversification-calculator.js"></script>
 
 </body>
-
 </html>
