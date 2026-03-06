@@ -1,73 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Greeks Lab | Kunal Finance</title>
+    <meta charset="UTF-8">
+    <title>5-Year Financial Roadmap (2026–2031) | Kunal Finance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="../common.css">
-<link rel="stylesheet" href="greeks-lab.css">
-
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="financial-roadmap.css">
 </head>
 
-<body class="dark">
+<body>
 
-<header>
-<a class="logo">📊 Kunal Finance</a>
+    <header>
+        <a href="index.html" class="logo">📊 Kunal Finance</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="financial-roadmap.html">Financial Roadmap</a>
+            <a href="trade-evaluation.html">Trade Evaluation</a>
+            <a href="notes.html">Notes</a>
+        </nav>
+    </header>
 
-<nav>
-<a href="../index.html">Home</a>
-<a href="financial-roadmap.html">Financial Roadmap</a>
-<a href="trade-evaluation.html">Trade Evaluation</a>
-</nav>
-</header>
+    <main>
+        <div class="scroll-area">
 
-<div class="scroll-area">
+            <div class="lab-container">
 
-<div class="lab-container">
+                <h1 class="lab-title">📊 Greeks Strategy Lab</h1>
+                <p class="lab-subtitle">
+                    Auto detect Iron Condor / Iron Fly based on Greeks rules
+                </p>
 
-<h1 class="lab-title">📊 Greeks Strategy Lab</h1>
-<p class="lab-subtitle">
-Auto detect Iron Condor / Iron Fly based on Greeks rules
-</p>
+                <section class="card">
 
-<section class="card">
+                    <h3>📥 Paste Option Chain Data</h3>
 
-<h3>📥 Paste Option Chain Data</h3>
-
-<textarea id="chainInput"
-placeholder="Example:
+                    <textarea id="chainInput" placeholder="Example:
 Strike Delta Theta Gamma Vega
 25200 -0.32 18 -0.12 -4
 25300 -0.18 12 -0.09 -3
 24800 0.35 17 -0.11 -4
 24700 0.15 10 -0.07 -3">
-</textarea>
+                    </textarea>
 
-<button class="primary-btn" onclick="analyzeChain()">
-⚙️ Find Best Strategy
-</button>
+                    <button class="primary-btn" onclick="analyzeChain()">
+                        ⚙️ Find Best Strategy
+                    </button>
 
-</section>
+                </section>
 
-<section class="card">
+                <section class="card">
 
-<h3>🧠 Suggested Strategy</h3>
+                    <h3>🧠 Suggested Strategy</h3>
 
-<div id="resultBox" class="result-box">
-Result will appear here...
-</div>
+                    <div id="resultBox" class="result-box">
+                        Result will appear here...
+                    </div>
 
-</section>
+                </section>
 
-</div>
+            </div>
 
-</div>
+        </div>
+    </main>
 
-<footer>
-© 2025 Kunal Finance. All rights reserved.
-</footer>
-
-<script src="greeks-lab.js"></script>
+    <footer>
+        © 2025 Kunal Finance. All rights reserved.
+    </footer>
 
 </body>
+
+</html>
+
 </html>
