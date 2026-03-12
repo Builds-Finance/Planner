@@ -12,151 +12,168 @@
 
 <body>
 
-<header>
-    <a href="index.html" class="logo">📊 Kunal Finance</a>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="financial-roadmap.html">Financial Roadmap</a>
-        <a href="trade-evaluation.html">Trade Evaluation</a>
-        <a href="notes.html">Notes</a>
-    </nav>
-</header>
+    <header>
+        <a href="index.html" class="logo">📊 Kunal Finance</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="financial-roadmap.html">Financial Roadmap</a>
+            <a href="trade-evaluation.html">Trade Evaluation</a>
+            <a href="notes.html">Notes</a>
+        </nav>
+    </header>
 
-<main>
-    <div class="scroll-area">
-        <section class="methods-grid">
+    <main>
+        <div class="scroll-area">
+            <section class="methods-grid">
 
-            <!-- ================= CARD 1 ================= -->
-            <div class="method-card">
-                <h2>💰 Cash Generation Model (Options Selling)</h2>
+                <!-- ================= CARD 1 ================= -->
+                <div class="method-card">
+                    <h2>💰 Cash Generation Model (Options Selling)</h2>
 
-                <ul>
-                    <li><strong>Initial Capital:</strong> ₹7 Lakh for cash generation</li>
-                    <li><strong>Method:</strong> Option selling strictly based on Greeks</li>
-                    <li><strong>Target Takeaway:</strong> 5% – 6% on invested capital</li>
-                    <li><strong>₹7 Lakh Cash Gen:</strong> ₹49,000</li>
-                    <li><strong>₹28 Lakh Cash Gen:</strong> ₹2 Lakh</li>
-                    <li><strong>Pledging Stop:</strong> Post June 2027 (first birthday)</li>
-                    <li><strong>Collateral Rule:</strong> Cash generation only via available collateral</li>
-                    <li>
-                        <strong>₹35 Lakh investment</strong> with 20% haircut gives
-                        <strong>₹28 Lakh collateral</strong> to generate
-                        <strong>₹2 Lakh per month</strong>
-                    </li>
-                </ul>
+                    <ul>
+                        <li><strong>Initial Capital:</strong> ₹7 Lakh for cash generation</li>
+                        <li><strong>Method:</strong> Option selling strictly based on Greeks</li>
+                        <li><strong>Target Takeaway:</strong> 5% – 6% on invested capital</li>
+                        <li><strong>₹7 Lakh Cash Gen:</strong> ₹49,000</li>
+                        <li><strong>₹28 Lakh Cash Gen:</strong> ₹2 Lakh</li>
+                        <li><strong>Pledging Stop:</strong> Post June 2027 (first birthday)</li>
+                        <li><strong>Collateral Rule:</strong> Cash generation only via available collateral</li>
+                        <li>
+                            <strong>₹35 Lakh investment</strong> with 20% haircut gives
+                            <strong>₹28 Lakh collateral</strong> to generate
+                            <strong>₹2 Lakh per month</strong>
+                        </li>
+                    </ul>
 
-                <h3>🧾 Final “GO / NO-GO” Checklist (As per Greeks)</h3>
-                <a href="greek-lab.html">Greeks Lab</a>
+                    <h3>🧾 Final “GO / NO-GO” Checklist (As per Greeks)</h3>
+                    <a href="greek-lab.html">Greeks Lab</a>
 
-                <h4>✅ Iron Condor — Allowed Only If</h4>
-                <ul>
-                    <li>Delta between -20 to +20</li>
-                    <li>Theta ≥ 20</li>
-                    <li>Gamma &lt; 1</li>
-                    <li>Vega negative</li>
-                    <li>Price between short strikes</li>
-                    <li>No major event ahead</li>
-                </ul>
+                    <h4>✅ Iron Condor — Allowed Only If</h4>
+                    <ul>
+                        <li>Delta between -20 to +20</li>
+                        <li>Theta ≥ 20</li>
+                        <li>Gamma &lt; 1</li>
+                        <li>Vega negative</li>
+                        <li>Price between short strikes</li>
+                        <li>No major event ahead</li>
+                    </ul>
 
-                <h4>⚠️ Iron Fly — Allowed Only If</h4>
-                <ul>
-                    <li>Delta between -10 to +10</li>
-                    <li>Theta ≥ 60</li>
-                    <li>Gamma &lt; 3</li>
-                    <li>Strongly negative Vega</li>
-                    <li>Price very close to ATM</li>
-                    <li>Ability to monitor / adjust</li>
-                </ul>
+                    <h4>⚠️ Iron Fly — Allowed Only If</h4>
+                    <ul>
+                        <li>Delta between -10 to +10</li>
+                        <li>Theta ≥ 60</li>
+                        <li>Gamma &lt; 3</li>
+                        <li>Strongly negative Vega</li>
+                        <li>Price very close to ATM</li>
+                        <li>Ability to monitor / adjust</li>
+                    </ul>
 
-                <h3>Execution Prompt</h3>
-                <p>
-                    <code>
+                    <h3>Execution Prompt</h3>
+                    <p>
+                        <code>
                         Analyse NIFTY / BANKNIFTY / XYZ stock for next expiry using saved Greeks rules
                     </code>
-                </p>
-                <p>Example: Analyse HDFC Bank stock for next expiry using saved Greeks rules.</p>
+                    </p>
+                    <p>Example: Analyse HDFC Bank stock for next expiry using saved Greeks rules.</p>
 
-                <h3>Pledging Rules</h3>
-                <ul>
-                    <li>Keep pledging until cash generation reaches ₹2 Lakh per month</li>
-                    <li>If ₹2 Lakh per month is achieved with ₹35 Lakh investment:
-                        <ul>
-                            <li>Stop pledging</li>
-                            <li>Focus only on compounding via diversification calculator</li>
-                        </ul>
-                    </li>
-                    <li>Do not generate cash above ₹2 Lakh from option selling</li>
-                    <li>Additional cash generation to be routed via InvIT</li>
-                </ul>
 
-                <p class="method-note">
-                    Philosophy: Cash generation is capped, controlled, and rule-based.
-                </p>
-            </div>
+                    <h3>Adjustment Prompt</h3>
+                    <p>
+                        <code>
+                Spot price = ___
+Short CE delta = ___
+Short PE delta = ___
+Delta imbalance = ___
+IV percentile = ___
+Current P/L = ___
+Initial credit = ___
+Distance to short strike = ___
 
-            <!-- ================= CARD 2 ================= -->
-            <div class="method-card">
-                <h2>📅 Monthly Investment Plan</h2>
+Check if adjustment is needed based on my Iron Condor adjustment rules and which adjustment type applies.
+        
+                    </code>
+                    </p>
 
-                <ul>
-                    <li><strong>Start Date:</strong> From 1 March onwards</li>
-                    <li>
-                        <strong>Monthly Deployment:</strong>
-                        Buy distributed investments of approximately
-                        ₹2 Lakh + cash generation amount
-                    </li>
-                    <li>
-                        <ul>
-                            <li>NIFTY BEES – 30%</li>
-                            <li>MID – 30%</li>
-                            <li>JUNIOR – 20%</li>
-                            <li>INVIT – 10%</li>
-                            <li>REIT – 10%</li>
-                        </ul>
-                    </li>
-                    <li><a href="diversification-calculator.html">Diversification calculator</a></li>
-                        
-                </ul>
+                    <h3>Pledging Rules</h3>
+                    <ul>
+                        <li>Keep pledging until cash generation reaches ₹2 Lakh per month</li>
+                        <li>If ₹2 Lakh per month is achieved with ₹35 Lakh investment:
+                            <ul>
+                                <li>Stop pledging</li>
+                                <li>Focus only on compounding via diversification calculator</li>
+                            </ul>
+                        </li>
+                        <li>Do not generate cash above ₹2 Lakh from option selling</li>
+                        <li>Additional cash generation to be routed via InvIT</li>
+                    </ul>
 
-                
+                    <p class="method-note">
+                        Philosophy: Cash generation is capped, controlled, and rule-based.
+                    </p>
+                </div>
 
-                <p class="method-note">
-                    Philosophy: Cash flow first, compounding second.
-                </p>
-            </div>
+                <!-- ================= CARD 2 ================= -->
+                <div class="method-card">
+                    <h2>📅 Monthly Investment Plan</h2>
 
-            <!-- ================= CARD 3 ================= -->
-            <div class="method-card">
-                <h2>🏗️ InvIT – Passive Income Rules</h2>
+                    <ul>
+                        <li><strong>Start Date:</strong> From 1 March onwards</li>
+                        <li>
+                            <strong>Monthly Deployment:</strong> Buy distributed investments of approximately ₹2 Lakh + cash generation amount
+                        </li>
+                        <li>
+                            <ul>
+                                <li>NIFTY BEES – 30%</li>
+                                <li>MID – 30%</li>
+                                <li>JUNIOR – 20%</li>
+                                <li>INVIT – 10%</li>
+                                <li>REIT – 10%</li>
+                            </ul>
+                        </li>
+                        <li><a href="diversification-calculator.html">Diversification calculator</a></li>
 
-                <ul>
-                    <li><strong>Passive Income Vehicle:</strong> InvIT (PowerGrid)</li>
-                    <li><strong>Passive Income Target:</strong> ₹2 Lakh</li>
-                </ul>
+                    </ul>
 
-                <h3>InvIT Compounding Conditions</h3>
-                <ul>
-                    <li>Stop InvIT compounding if price is greater than <strong>105</strong></li>
-                    <li>Also stop if dividend income reaches <strong>₹2 Lakh</strong>. Target is to reach <strong>₹2 Lakh</strong> per month.</li>
-                </ul>
 
-                <ul class="method-note">
-                    Philosophy: Income discipline matters more than price excitement.
-                    <h4>Notes:</h4> 
-                    <li><strong>1️⃣ Options:</strong> Stop pledging once cumulative cash generated reaches ₹2 lakh. Thereafter, investments in BEES will continue solely for compounding purposes. Options selling will be carried out only with limited capital.</li>
-                    <li><strong>2️⃣ BEES (Equity ETFs):</strong> Stop fresh investments once ₹25L total is invested across all NIFTYBEES + MID150BEES + JUNIORBEES; let them compound on their own.</li>
-                    <li><strong>3️⃣ InvIT → Next:</strong> Invest in InvITs until ₹2L/month distributions are reached; then stop InvITs and shift new capital to REITs & metals.</li>
-                    <li><strong>4⃣ Adjustment Rules for Iron Condor:</strong> Either do not adjust or once breakeven is reached then close one side and shift wings of other side.</li>
-                </ul>
-            </div>
 
-        </section>
-    </div>
-</main>
+                    <p class="method-note">
+                        Philosophy: Cash flow first, compounding second.
+                    </p>
+                </div>
 
-<footer>
-    © 2025 Kunal Finance. All rights reserved.
-</footer>
+                <!-- ================= CARD 3 ================= -->
+                <div class="method-card">
+                    <h2>🏗️ InvIT – Passive Income Rules</h2>
+
+                    <ul>
+                        <li><strong>Passive Income Vehicle:</strong> InvIT (PowerGrid)</li>
+                        <li><strong>Passive Income Target:</strong> ₹2 Lakh</li>
+                    </ul>
+
+                    <h3>InvIT Compounding Conditions</h3>
+                    <ul>
+                        <li>Stop InvIT compounding if price is greater than <strong>105</strong></li>
+                        <li>Also stop if dividend income reaches <strong>₹2 Lakh</strong>. Target is to reach <strong>₹2 Lakh</strong> per month.</li>
+                    </ul>
+
+                    <ul class="method-note">
+                        Philosophy: Income discipline matters more than price excitement.
+                        <h4>Notes:</h4>
+                        <li><strong>1⃣ Options:</strong> Stop pledging once cumulative cash generated reaches ₹2 lakh. Thereafter, investments in BEES will continue solely for compounding purposes. Options selling will be carried out only with limited capital.</li>
+                        <li><strong>2⃣ BEES (Equity ETFs):</strong> Stop fresh investments once ₹25L total is invested across all NIFTYBEES + MID150BEES + JUNIORBEES; let them compound on their own.</li>
+                        <li><strong>3⃣ InvIT → Next:</strong> Invest in InvITs until ₹2L/month distributions are reached; then stop InvITs and shift new capital to REITs & metals.</li>
+                        <li><strong>4⃣ Adjustment Rules for Iron Condor:</strong> Either do not adjust or once breakeven is reached then close one side and shift wings of other side.</li>
+                    </ul>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        © 2025 Kunal Finance. All rights reserved.
+    </footer>
 
 </body>
+
 </html>
