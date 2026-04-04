@@ -93,98 +93,64 @@
                     <h3>Execution Prompt</h3>
 
                     <div class="notes-section">
+Act as a professional options risk manager and analyse this option chain using my saved options selling framework.
+Follow these rules strictly:
+Iron Condor entry rules:
+•	Short strike delta between 0.18–0.22 
+•	Portfolio delta between −20 to +20 
+•	Theta ≥ 20 
+•	Gamma low 
+•	Vega negative 
+•	POP ≥ 65% preferred 
+•	Credit ≥ 30% of spread width 
+•	Wing width ≈ 1.2–1.5× expected move 
+•	IV percentile consideration (reduce size if >90) 
+Structure rules:
+•	Identify whether condor is neutral or directional 
+•	If directional, justify using probability/Greeks 
+Iron Fly comparison:
+Check if Iron Fly is superior using:
+•	Delta −10 to +10 
+•	Theta ≥60 
+•	Gamma <3 
+•	Strong negative Vega 
+Risk evaluation:
+Provide:
+•	Probability of profit assessment 
+•	Break-even levels 
+•	Risk reward quality 
+•	Margin efficiency 
+Adjustment planning (very important):
+Identify:
+•	Delta danger levels (0.30 and 0.35 triggers) 
+•	Price levels requiring adjustment 
+•	When rolling is better 
+•	When fly conversion is better 
+•	When averaging is allowed 
+Decision output format:
+Give final verdict:
+Trade Quality:
+(A grade / B grade / C grade / Reject)
+Suggested structure:
+•	Sell strikes: 
+•	Buy wings: 
+Greeks assessment:
+•	Portfolio Delta: 
+•	Theta: 
+•	Gamma: 
+•	Vega: 
+Probability assessment:
+Risk type:
+(Conservative / Standard / Aggressive)
+Adjustment triggers:
+Best alternative (if current structure not optimal):
+Most important risk:
+Final decision:
+Trade / Avoid / Wait
+Reject any trade that violates my Greeks rules.
 
-                        <h2>Options Selling Framework – Iron Condor Evaluation Checklist</h2>
 
-                        <h3>Role</h3>
-                        <p>Act as a professional options risk manager and analyse this option chain using my saved options selling framework.</p>
-
-                        <h3>Iron Condor Entry Rules</h3>
-                        <ul>
-                            <li>Short strike delta between <b>0.18–0.22</b></li>
-                            <li>Portfolio delta between <b>−20 to +20</b></li>
-                            <li>Theta <b>≥ 20</b></li>
-                            <li>Gamma should be <b>low</b></li>
-                            <li>Vega should be <b>negative</b></li>
-                            <li>POP <b>≥ 65%</b> preferred</li>
-                            <li>Credit <b>≥ 30%</b> of spread width</li>
-                            <li>Wing width ≈ <b>1.2–1.5× expected move</b></li>
-                            <li>Check IV percentile (reduce size if <b>>90</b>)</li>
-                        </ul>
-
-                        <h3>Structure Rules</h3>
-                        <ul>
-                            <li>Identify whether condor is <b>neutral or directional</b></li>
-                            <li>If directional, justify using <b>probability and Greeks</b></li>
-                        </ul>
-
-                        <h3>Iron Fly Comparison</h3>
-                        <p>Check if Iron Fly is superior using:</p>
-                        <ul>
-                            <li>Delta between <b>−10 to +10</b></li>
-                            <li>Theta <b>≥ 60</b></li>
-                            <li>Gamma <b>< 3</b></li>
-                            <li>Strong <b>negative Vega</b></li>
-                        </ul>
-
-                        <h3>Risk Evaluation</h3>
-                        <p>Provide:</p>
-                        <ul>
-                            <li>Probability of profit assessment</li>
-                            <li>Break-even levels</li>
-                            <li>Risk reward quality</li>
-                            <li>Margin efficiency</li>
-                        </ul>
-
-                        <h3>Adjustment Planning (Critical)</h3>
-                        <p>Identify:</p>
-                        <ul>
-                            <li>Delta danger levels (<b>0.30 and 0.35 triggers</b>)</li>
-                            <li>Price levels requiring adjustment</li>
-                            <li>When <b>rolling</b> is better</li>
-                            <li>When <b>fly conversion</b> is better</li>
-                            <li>When <b>averaging</b> is allowed</li>
-                        </ul>
-
-                        <h3>Decision Output Format</h3>
-
-                        <h4>Final Verdict</h4>
-
-                        <p><b>Trade Quality:</b>
-                            <br> (A grade / B grade / C grade / Reject)</p>
-
-                        <p><b>Suggested structure:</b></p>
-                        <ul>
-                            <li>Sell strikes:</li>
-                            <li>Buy wings:</li>
-                        </ul>
-
-                        <p><b>Greeks assessment:</b></p>
-                        <ul>
-                            <li>Portfolio Delta:</li>
-                            <li>Theta:</li>
-                            <li>Gamma:</li>
-                            <li>Vega:</li>
-                        </ul>
-
-                        <p><b>Probability assessment:</b></p>
-
-                        <p><b>Risk type:</b>
-                            <br> (Conservative / Standard / Aggressive)</p>
-
-                        <p><b>Adjustment triggers:</b></p>
-
-                        <p><b>Best alternative (if current structure not optimal):</b></p>
-
-                        <p><b>Most important risk:</b></p>
-
-                        <p><b>Final decision:</b>
-                            <br>
-                            <b>Trade / Avoid / Wait</b></p>
-
-                        <h3>Important Rule</h3>
-                        <p><b>Reject any trade that violates my Greeks rules.</b></p>
-
+                       
                     </div>
 
                     <h3>Adjustment Prompt (Old)</h3>
