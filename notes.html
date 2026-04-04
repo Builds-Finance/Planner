@@ -92,16 +92,18 @@
 
                     <h3>Execution Prompt</h3>
                     <p>
-                        <code>
-                        Analyse NIFTY / BANKNIFTY / XYZ stock for next expiry using saved Greeks rules
-                    </code>
-                    </p>
-                    <p>Example: Analyse HDFC Bank stock for next expiry using saved Greeks rules.</p>
+                        Act as a professional options risk manager and analyse this option chain using my saved options selling framework. Follow these rules strictly: Iron Condor entry rules: Short strike delta between 0.18–0.22 Portfolio delta between −20 to +20 Theta ≥ 20
+                        Gamma low Vega negative POP ≥ 65% preferred Credit ≥ 30% of spread width Wing width ≈ 1.2–1.5× expected move IV percentile consideration (reduce size if >90) Structure rules: Identify whether condor is neutral or directional If
+                        directional, justify using probability/Greeks Iron Fly comparison: Check if Iron Fly is superior using: Delta −10 to +10 Theta ≥60 Gamma
+                        <3 Strong negative Vega Risk evaluation: Provide: Probability of profit
+                        assessment Break-even levels Risk reward quality Margin efficiency Adjustment planning (very important): Identify: Delta danger levels (0.30 and 0.35 triggers) Price levels requiring adjustment When rolling is better When fly conversion
+                        is better When averaging is allowed Decision output format: Give final verdict: Trade Quality: (A grade / B grade / C grade / Reject) Suggested structure: Sell strikes: Buy wings: Greeks assessment: Portfolio Delta: Theta: Gamma:
+                        Vega: Probability assessment: Risk type: (Conservative / Standard / Aggressive) Adjustment triggers: Best alternative (if current structure not optimal): Most important risk: Final decision: Trade / Avoid / Wait Reject any trade
+                        that violates my Greeks rules. </p>
 
-
-                    <h3>Adjustment Prompt</h3>
-                    <p>
-                        <code>
+                            <h3>Adjustment Prompt (Old)</h3>
+                            <p>
+                                <code>
                 Spot price = ___
 Short CE delta = ___
 Short PE delta = ___
@@ -114,24 +116,24 @@ Distance to short strike = ___
 Check if adjustment is needed based on my Iron Condor adjustment rules and which adjustment type applies.
         
                     </code>
-                    </p>
+                            </p>
 
-                    <h3>Pledging Rules</h3>
-                    <ul>
-                        <li>Keep pledging until cash generation reaches ₹2 Lakh per month</li>
-                        <li>If ₹2 Lakh per month is achieved with ₹35 Lakh investment:
+                            <h3>Pledging Rules</h3>
                             <ul>
-                                <li>Stop pledging</li>
-                                <li>Focus only on compounding via diversification calculator</li>
+                                <li>Keep pledging until cash generation reaches ₹2 Lakh per month</li>
+                                <li>If ₹2 Lakh per month is achieved with ₹35 Lakh investment:
+                                    <ul>
+                                        <li>Stop pledging</li>
+                                        <li>Focus only on compounding via diversification calculator</li>
+                                    </ul>
+                                </li>
+                                <li>Do not generate cash above ₹2 Lakh from option selling</li>
+                                <li>Additional cash generation to be routed via InvIT</li>
                             </ul>
-                        </li>
-                        <li>Do not generate cash above ₹2 Lakh from option selling</li>
-                        <li>Additional cash generation to be routed via InvIT</li>
-                    </ul>
 
-                    <p class="method-note">
-                        Philosophy: Cash generation is capped, controlled, and rule-based.
-                    </p>
+                            <p class="method-note">
+                                Philosophy: Cash generation is capped, controlled, and rule-based.
+                            </p>
                 </div>
 
                 <!-- ================= CARD 2 ================= -->
