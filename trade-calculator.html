@@ -17,7 +17,6 @@
       padding: 6px;
       text-align: center;
       background: transparent;
-      font-size: 14px;
     }
 
     input:focus {
@@ -46,26 +45,22 @@
 </tr>
 
 <tr>
-  <!-- INPUTS -->
   <td class="input">
-    <input id="lot" placeholder="Lot Size" oninput="calc()">
+    <input id="lot" oninput="calc()">
   </td>
 
-  <!-- FORMULAS -->
   <td class="formula" id="rsiProfit"></td>
   <td class="formula" id="firstAvgPercent"></td>
   <td class="formula" id="firstAvg"></td>
 
-  <!-- ENTRY INPUT -->
   <td class="input">
-    <input id="entry" placeholder="Entry Price" oninput="calc()">
+    <input id="entry" oninput="calc()">
   </td>
 
   <td class="formula" id="avgPrice"></td>
   <td class="formula" id="rsiTarget"></td>
   <td class="formula" id="takeProfit"></td>
 
-  <!-- OUTPUT -->
   <td class="output" id="avgDiff"></td>
   <td class="output" id="targetDiff"></td>
 </tr>
@@ -75,38 +70,21 @@
 <script>
 function calc() {
 
-  let B = Number(document.getElementById("lot").value);     // Lot Size
-  let F = Number(document.getElementById("entry").value);   // Entry
+  let B = Number(document.getElementById("lot").value);
+  let F = Number(document.getElementById("entry").value);
 
   if (!B || !F) return;
 
-  // ===== EXACT EXCEL LOGIC =====
+  // ✅ FIXED HERE
+  let D = 4000 / (F * B);
 
-  // First Avg %
-  let D = -4000 / (F * B);
-
-  // First Avg
   let E = (F * D) + F;
-
-  // Avg Price
   let G = (E + F) / 2;
-
-  // RSI Profit %
   let C = 3000 / (G * B);
-
-  // RSI Target
   let H = (G * C) + G;
-
-  // Take Away Profit
   let I = (H - F) * B;
-
-  // First Avg Diff
   let J = E - F;
-
-  // Target Diff
   let K = H - G;
-
-  // ===== DISPLAY (MATCH EXCEL PRECISION) =====
 
   document.getElementById("rsiProfit").innerText = C.toFixed(9);
   document.getElementById("firstAvgPercent").innerText = D.toFixed(9);
