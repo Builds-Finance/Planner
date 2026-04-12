@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Trade Setup</title>
+  <title>Futures Trade Setup</title>
   <style>
     body { font-family: Arial; padding: 20px; }
-    table { border-collapse: collapse; }
+    table { border-collapse: collapse; width: 100%; max-width: 1000px; }
     td, th { border: 1px solid #ccc; padding: 8px; text-align: center; }
+
     .input { background-color: #b3e5fc; }
     .formula { background-color: #fff59d; }
     .output { background-color: #c8e6c9; }
+
+    input {
+      width: 100%;
+      border: none;
+      padding: 5px;
+      text-align: center;
+      background: transparent;
+    }
+
+    input:focus {
+      outline: none;
+      background: #e1f5fe;
+    }
   </style>
 </head>
 
@@ -31,14 +45,26 @@
 </tr>
 
 <tr>
-  <td class="input"><input id="lot" oninput="calc()"></td>
+  <!-- Inputs -->
+  <td class="input">
+    <input id="lot" placeholder="Lot Size" oninput="calc()">
+  </td>
+
+  <!-- Formula cells -->
   <td class="formula" id="rsiProfit"></td>
   <td class="formula" id="firstAvgPercent"></td>
   <td class="formula" id="firstAvg"></td>
-  <td class="formula" id="entry">1188</td>
+
+  <!-- Entry now input -->
+  <td class="input">
+    <input id="entry" placeholder="Entry Price" oninput="calc()">
+  </td>
+
   <td class="formula" id="avgPrice"></td>
   <td class="formula" id="rsiTarget"></td>
   <td class="formula" id="takeProfit"></td>
+
+  <!-- Outputs -->
   <td class="output" id="avgDiff"></td>
   <td class="output" id="targetDiff"></td>
 </tr>
@@ -48,29 +74,36 @@
 <script>
 function calc() {
 
-  let B = Number(document.getElementById("lot").value); // Lot
-  let F = 1188; // Entry (static)
+  let B = Number(document.getElementById("lot").value);     // Lot Size
+  let F = Number(document.getElementById("entry").value);   // Entry
 
-  if (!B) return;
+  if (!B || !F) return;
 
-  // ===== Excel Logic Converted =====
+  // ===== Excel Formula Conversion =====
 
-  // C2 = 3000 / (G2 * B2)
-  // but G2 depends on avg price, so calculate stepwise
+  // First Avg %
+  let D = -4000 / (F * B);
 
-  let D = -4000 / (F * B);   // First Avg %
-  let E = F * D + F;         // First Avg
+  // First Avg
+  let E = (F * D) + F;
 
-  let G = (E + F) / 2;       // Avg Price
+  // Avg Price
+  let G = (E + F) / 2;
 
-  let C = 3000 / (G * B);    // RSI Profit %
+  // RSI Profit %
+  let C = 3000 / (G * B);
 
-  let H = (G * C) + G;       // RSI Target
+  // RSI Target
+  let H = (G * C) + G;
 
-  let I = (H - F) * B;       // Take away profit
+  // Take Away Profit
+  let I = (H - F) * B;
 
-  let J = E - F;             // First Avg Diff
-  let K = H - G;             // Target Diff
+  // First Avg Diff
+  let J = E - F;
+
+  // Target Diff
+  let K = H - G;
 
   // ===== Display =====
 
@@ -82,7 +115,6 @@ function calc() {
   document.getElementById("takeProfit").innerText = I.toFixed(2);
   document.getElementById("avgDiff").innerText = J.toFixed(2);
   document.getElementById("targetDiff").innerText = K.toFixed(2);
-
 }
 </script>
 
