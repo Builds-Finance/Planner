@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Futures Trade Setup</title>
+</head>
+<body>
+
+<h2>Trade Setup Calculator</h2>
+
+<label>Lot Size:</label>
+<input id="lot" oninput="calculate()"><br><br>
+
+<label>Price:</label>
+<input id="price" oninput="calculate()"><br><br>
+
+<h3>Results</h3>
+
+<p>Quantity: <span id="qty"></span></p>
+<p>Capital Used: <span id="capital"></span></p>
+<p>Risk Amount: <span id="riskAmt"></span></p>
+<p>Risk per Unit: <span id="riskPerUnit"></span></p>
+<p>Target Diff: <span id="target"></span></p>
+
+<script>
+function calculate() {
+  let lot = Number(document.getElementById("lot").value);
+  let price = Number(document.getElementById("price").value);
+
+  if (!lot || !price) return;
+
+  // ===== YOUR LOGIC (can be tuned exactly to Excel) =====
+
+  let qty = lot; // assuming 1 lot trade
+  let capital = qty * price;
+
+  let riskPercent = 1; // static (can change based on your sheet)
+  let riskAmt = capital * (riskPercent / 100);
+
+  let riskPerUnit = riskAmt / qty;
+
+  let target = riskPerUnit * 0.75;
+
+  // ===== OUTPUT =====
+
+  document.getElementById("qty").innerText = qty;
+  document.getElementById("capital").innerText = capital.toFixed(2);
+  document.getElementById("riskAmt").innerText = riskAmt.toFixed(2);
+  document.getElementById("riskPerUnit").innerText = riskPerUnit.toFixed(2);
+  document.getElementById("target").innerText = target.toFixed(2);
+}
+</script>
+</body>
+</html>
