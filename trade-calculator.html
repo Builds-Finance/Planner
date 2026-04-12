@@ -6,10 +6,7 @@
     <title>Trade Calculator | Kunal Finance</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Core styles -->
     <link rel="stylesheet" href="common.css">
-
-    <!-- Page styles -->
     <link rel="stylesheet" href="trade-calculator.css">
 </head>
 
@@ -17,12 +14,6 @@
 
 <header>
     <a href="index.html" class="logo">📊 Kunal Finance</a>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="financial-roadmap.html">Financial Roadmap</a>
-        <a href="trade-evaluation.html">Trade Evaluation</a>
-        <a href="notes.html">Notes</a>
-    </nav>
 </header>
 
 <main>
@@ -32,34 +23,35 @@
 
 <div class="calculator-card">
 
-<h1>📈 Futures Trade Setup</h1>
+<h1>📈 Trade Decision Output</h1>
 <p class="subtitle">
-    Input lot size and entry price to evaluate trade setup.
+    Enter inputs → See only final decision metrics
 </p>
 
 <h2>Input</h2>
 
 <label>Lot Size</label>
-<input type="number" id="lot" placeholder="e.g. 3000" oninput="calc()">
+<input type="number" id="lot" oninput="calc()">
 
 <label>Entry Price</label>
-<input type="number" id="entry" placeholder="e.g. 40.6" oninput="calc()">
+<input type="number" id="entry" oninput="calc()">
 
-<h2>Output</h2>
+<h2>Final Output</h2>
 
-<ul id="resultOutput">
-    <li>RSI Profit %: <span id="rsiProfit">-</span></li>
-    <li>First Avg %: <span id="firstAvgPercent">-</span></li>
-    <li>First Avg: <span id="firstAvg">-</span></li>
-    <li>Avg Price: <span id="avgPrice">-</span></li>
-    <li>RSI Target: <span id="rsiTarget">-</span></li>
-    <li>Take Away Profit: <span id="takeProfit">-</span></li>
-    <li>First Avg Diff: <span id="avgDiff">-</span></li>
-    <li>Target Diff: <span id="targetDiff">-</span></li>
-</ul>
+<div class="output-box">
+    <div class="output-item">
+        <span>First Avg Diff</span>
+        <strong id="avgDiff">-</strong>
+    </div>
+
+    <div class="output-item">
+        <span>Target Diff</span>
+        <strong id="targetDiff">-</strong>
+    </div>
+</div>
 
 <p class="calculator-note">
-    Discipline first. Let math validate the trade.
+    Focus only on decision variables. Ignore noise.
 </p>
 
 </div>
@@ -70,7 +62,7 @@
 </main>
 
 <footer>
-    © 2025 Kunal Finance. All rights reserved.
+    © 2025 Kunal Finance
 </footer>
 
 <script>
@@ -81,22 +73,17 @@ function calc() {
 
     if (!B || !F) return;
 
-    // Excel logic
+    // Hidden full calculation (same as Excel)
     let D = 4000 / (F * B);
     let E = (F * D) + F;
     let G = (E + F) / 2;
     let C = 3000 / (G * B);
     let H = (G * C) + G;
     let I = (H - F) * B;
-    let J = E - F;
-    let K = H - G;
 
-    document.getElementById("rsiProfit").innerText = C.toFixed(9);
-    document.getElementById("firstAvgPercent").innerText = D.toFixed(9);
-    document.getElementById("firstAvg").innerText = E.toFixed(2);
-    document.getElementById("avgPrice").innerText = G.toFixed(2);
-    document.getElementById("rsiTarget").innerText = H.toFixed(2);
-    document.getElementById("takeProfit").innerText = I.toFixed(0);
+    let J = E - F;   // First Avg Diff
+    let K = H - G;   // Target Diff
+
     document.getElementById("avgDiff").innerText = J.toFixed(2);
     document.getElementById("targetDiff").innerText = K.toFixed(2);
 }
