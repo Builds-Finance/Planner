@@ -1,3 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Futures Trade Setup</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    table { border-collapse: collapse; width: 100%; max-width: 1100px; }
+    td, th { border: 1px solid #ccc; padding: 10px; text-align: center; }
+
+    .input { background-color: #b3e5fc; }
+    .formula { background-color: #fff59d; }
+    .output { background-color: #c8e6c9; }
+
+    input {
+      width: 100%;
+      border: none;
+      padding: 6px;
+      text-align: center;
+      background: transparent;
+      font-size: 14px;
+    }
+
+    input:focus {
+      outline: none;
+      background: #e1f5fe;
+    }
+  </style>
+</head>
+
+<body>
+
+<h2>Futures Trade Setup</h2>
+
+<table>
+<tr>
+  <th>Lot Size</th>
+  <th>RSI Profit %</th>
+  <th>First Avg %</th>
+  <th>First Avg</th>
+  <th>Entry</th>
+  <th>Avg Price</th>
+  <th>RSI Target</th>
+  <th>Take Away Profit</th>
+  <th>First Avg Diff</th>
+  <th>Target Diff</th>
+</tr>
+
+<tr>
+  <!-- INPUTS -->
+  <td class="input">
+    <input id="lot" placeholder="Lot Size" oninput="calc()">
+  </td>
+
+  <!-- FORMULAS -->
+  <td class="formula" id="rsiProfit"></td>
+  <td class="formula" id="firstAvgPercent"></td>
+  <td class="formula" id="firstAvg"></td>
+
+  <!-- ENTRY INPUT -->
+  <td class="input">
+    <input id="entry" placeholder="Entry Price" oninput="calc()">
+  </td>
+
+  <td class="formula" id="avgPrice"></td>
+  <td class="formula" id="rsiTarget"></td>
+  <td class="formula" id="takeProfit"></td>
+
+  <!-- OUTPUT -->
+  <td class="output" id="avgDiff"></td>
+  <td class="output" id="targetDiff"></td>
+</tr>
+
+</table>
+
+<script>
 function calc() {
 
   let B = Number(document.getElementById("lot").value);     // Lot Size
@@ -5,33 +80,33 @@ function calc() {
 
   if (!B || !F) return;
 
-  // ===== EXACT ORDER (same as Excel dependency) =====
+  // ===== EXACT EXCEL LOGIC =====
 
-  // D = -4000 / (F * B)
+  // First Avg %
   let D = -4000 / (F * B);
 
-  // E = F * D + F
+  // First Avg
   let E = (F * D) + F;
 
-  // G = AVERAGE(E, F)
+  // Avg Price
   let G = (E + F) / 2;
 
-  // C = 3000 / (G * B)
+  // RSI Profit %
   let C = 3000 / (G * B);
 
-  // H = (G * C) + G
+  // RSI Target
   let H = (G * C) + G;
 
-  // I = (H - F) * B
+  // Take Away Profit
   let I = (H - F) * B;
 
-  // J = E - F
+  // First Avg Diff
   let J = E - F;
 
-  // K = H - G
+  // Target Diff
   let K = H - G;
 
-  // ===== DISPLAY (important precision) =====
+  // ===== DISPLAY (MATCH EXCEL PRECISION) =====
 
   document.getElementById("rsiProfit").innerText = C.toFixed(9);
   document.getElementById("firstAvgPercent").innerText = D.toFixed(9);
@@ -42,3 +117,7 @@ function calc() {
   document.getElementById("avgDiff").innerText = J.toFixed(2);
   document.getElementById("targetDiff").innerText = K.toFixed(2);
 }
+</script>
+
+</body>
+</html>
