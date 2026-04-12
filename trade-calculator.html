@@ -1,99 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Futures Trade Setup</title>
-  <style>
-    body { font-family: Arial; padding: 20px; }
-    table { border-collapse: collapse; width: 100%; max-width: 1100px; }
-    td, th { border: 1px solid #ccc; padding: 10px; text-align: center; }
+    <meta charset="UTF-8">
+    <title>Trade Calculator | Kunal Finance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .input { background-color: #b3e5fc; }
-    .formula { background-color: #fff59d; }
-    .output { background-color: #c8e6c9; }
+    <!-- Core styles -->
+    <link rel="stylesheet" href="common.css">
 
-    input {
-      width: 100%;
-      border: none;
-      padding: 6px;
-      text-align: center;
-      background: transparent;
-    }
-
-    input:focus {
-      outline: none;
-      background: #e1f5fe;
-    }
-  </style>
+    <!-- Page styles -->
+    <link rel="stylesheet" href="trade-calculator.css">
 </head>
 
 <body>
 
-<h2>Futures Trade Setup</h2>
+<header>
+    <a href="index.html" class="logo">📊 Kunal Finance</a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="financial-roadmap.html">Financial Roadmap</a>
+        <a href="trade-evaluation.html">Trade Evaluation</a>
+        <a href="notes.html">Notes</a>
+    </nav>
+</header>
 
-<table>
-<tr>
-  <th>Lot Size</th>
-  <th>RSI Profit %</th>
-  <th>First Avg %</th>
-  <th>First Avg</th>
-  <th>Entry</th>
-  <th>Avg Price</th>
-  <th>RSI Target</th>
-  <th>Take Away Profit</th>
-  <th>First Avg Diff</th>
-  <th>Target Diff</th>
-</tr>
+<main>
+<div class="scroll-area">
 
-<tr>
-  <td class="input">
-    <input id="lot" oninput="calc()">
-  </td>
+<section class="calculator-wrapper">
 
-  <td class="formula" id="rsiProfit"></td>
-  <td class="formula" id="firstAvgPercent"></td>
-  <td class="formula" id="firstAvg"></td>
+<div class="calculator-card">
 
-  <td class="input">
-    <input id="entry" oninput="calc()">
-  </td>
+<h1>📈 Futures Trade Setup</h1>
+<p class="subtitle">
+    Input lot size and entry price to evaluate trade setup.
+</p>
 
-  <td class="formula" id="avgPrice"></td>
-  <td class="formula" id="rsiTarget"></td>
-  <td class="formula" id="takeProfit"></td>
+<h2>Input</h2>
 
-  <td class="output" id="avgDiff"></td>
-  <td class="output" id="targetDiff"></td>
-</tr>
+<label>Lot Size</label>
+<input type="number" id="lot" placeholder="e.g. 3000" oninput="calc()">
 
-</table>
+<label>Entry Price</label>
+<input type="number" id="entry" placeholder="e.g. 40.6" oninput="calc()">
+
+<h2>Output</h2>
+
+<ul id="resultOutput">
+    <li>RSI Profit %: <span id="rsiProfit">-</span></li>
+    <li>First Avg %: <span id="firstAvgPercent">-</span></li>
+    <li>First Avg: <span id="firstAvg">-</span></li>
+    <li>Avg Price: <span id="avgPrice">-</span></li>
+    <li>RSI Target: <span id="rsiTarget">-</span></li>
+    <li>Take Away Profit: <span id="takeProfit">-</span></li>
+    <li>First Avg Diff: <span id="avgDiff">-</span></li>
+    <li>Target Diff: <span id="targetDiff">-</span></li>
+</ul>
+
+<p class="calculator-note">
+    Discipline first. Let math validate the trade.
+</p>
+
+</div>
+
+</section>
+
+</div>
+</main>
+
+<footer>
+    © 2025 Kunal Finance. All rights reserved.
+</footer>
 
 <script>
 function calc() {
 
-  let B = Number(document.getElementById("lot").value);
-  let F = Number(document.getElementById("entry").value);
+    let B = Number(document.getElementById("lot").value);
+    let F = Number(document.getElementById("entry").value);
 
-  if (!B || !F) return;
+    if (!B || !F) return;
 
-  // ✅ FIXED HERE
-  let D = 4000 / (F * B);
+    // Excel logic
+    let D = 4000 / (F * B);
+    let E = (F * D) + F;
+    let G = (E + F) / 2;
+    let C = 3000 / (G * B);
+    let H = (G * C) + G;
+    let I = (H - F) * B;
+    let J = E - F;
+    let K = H - G;
 
-  let E = (F * D) + F;
-  let G = (E + F) / 2;
-  let C = 3000 / (G * B);
-  let H = (G * C) + G;
-  let I = (H - F) * B;
-  let J = E - F;
-  let K = H - G;
-
-  document.getElementById("rsiProfit").innerText = C.toFixed(9);
-  document.getElementById("firstAvgPercent").innerText = D.toFixed(9);
-  document.getElementById("firstAvg").innerText = E.toFixed(2);
-  document.getElementById("avgPrice").innerText = G.toFixed(2);
-  document.getElementById("rsiTarget").innerText = H.toFixed(2);
-  document.getElementById("takeProfit").innerText = I.toFixed(0);
-  document.getElementById("avgDiff").innerText = J.toFixed(2);
-  document.getElementById("targetDiff").innerText = K.toFixed(2);
+    document.getElementById("rsiProfit").innerText = C.toFixed(9);
+    document.getElementById("firstAvgPercent").innerText = D.toFixed(9);
+    document.getElementById("firstAvg").innerText = E.toFixed(2);
+    document.getElementById("avgPrice").innerText = G.toFixed(2);
+    document.getElementById("rsiTarget").innerText = H.toFixed(2);
+    document.getElementById("takeProfit").innerText = I.toFixed(0);
+    document.getElementById("avgDiff").innerText = J.toFixed(2);
+    document.getElementById("targetDiff").innerText = K.toFixed(2);
 }
 </script>
 
