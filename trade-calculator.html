@@ -6,7 +6,10 @@
     <title>Trade Calculator | Kunal Finance</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Core styles -->
     <link rel="stylesheet" href="common.css">
+
+    <!-- Page styles -->
     <link rel="stylesheet" href="trade-calculator.css">
 </head>
 
@@ -30,15 +33,24 @@
 
 <h2>Input</h2>
 
-<label>Lot Size</label>
-<input type="number" id="lot" oninput="calc()">
+<div class="input-grid">
 
-<label>Entry Price</label>
-<input type="number" id="entry" oninput="calc()">
+    <div class="input-group">
+        <label>Lot Size</label>
+        <input type="number" id="lot" placeholder="Enter lot size" oninput="calc()">
+    </div>
+
+    <div class="input-group">
+        <label>Entry Price</label>
+        <input type="number" id="entry" placeholder="Enter entry price" oninput="calc()">
+    </div>
+
+</div>
 
 <h2>Final Output</h2>
 
 <div class="output-box">
+
     <div class="output-item">
         <span>First Avg Diff</span>
         <strong id="avgDiff">-</strong>
@@ -48,6 +60,7 @@
         <span>Target Diff</span>
         <strong id="targetDiff">-</strong>
     </div>
+
 </div>
 
 <p class="calculator-note">
@@ -73,7 +86,7 @@ function calc() {
 
     if (!B || !F) return;
 
-    // Hidden full calculation (same as Excel)
+    // Excel logic (exact)
     let D = 4000 / (F * B);
     let E = (F * D) + F;
     let G = (E + F) / 2;
