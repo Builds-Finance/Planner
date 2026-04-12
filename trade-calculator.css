@@ -113,7 +113,7 @@
 }
 
 /* ================================
-   STRATEGY RULES (🔥 NEW UPGRADE)
+   STRATEGY RULES (FIXED BULLETS)
 ================================ */
 
 .calculator-rules {
@@ -122,6 +122,9 @@
     border-radius: 14px;
     background: linear-gradient(180deg, #020617, #020617);
     border: 1px solid rgba(255,255,255,0.08);
+
+    list-style: none;
+    padding-left: 0;
 }
 
 .calculator-rules li {
@@ -130,26 +133,33 @@
     font-size: 0.92rem;
     line-height: 1.5;
     position: relative;
-    padding-left: 14px;
+    padding-left: 18px;
 }
 
-/* custom bullet */
 .calculator-rules li::before {
     content: "•";
     position: absolute;
     left: 0;
     color: #22d3ee;
+    font-size: 1.2rem;
 }
 
-/* nested list */
+/* Nested rules */
 .calculator-rules ul {
     margin-top: 6px;
-    padding-left: 16px;
+    padding-left: 18px;
+    list-style: none;
 }
 
 .calculator-rules ul li {
     font-size: 0.88rem;
     color: #94a3b8;
+}
+
+/* Optional nested bullet style */
+.calculator-rules ul li::before {
+    content: "◦";
+    color: #64748b;
 }
 
 /* ================================
