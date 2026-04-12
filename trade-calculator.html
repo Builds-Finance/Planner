@@ -1,53 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Futures Trade Setup</title>
+  <title>Trade Setup</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    table { border-collapse: collapse; }
+    td, th { border: 1px solid #ccc; padding: 8px; text-align: center; }
+    .input { background-color: #b3e5fc; }
+    .formula { background-color: #fff59d; }
+    .output { background-color: #c8e6c9; }
+  </style>
 </head>
+
 <body>
 
-<h2>Trade Setup Calculator</h2>
+<h2>Futures Trade Setup</h2>
 
-<label>Lot Size:</label>
-<input id="lot" oninput="calculate()"><br><br>
+<table>
+<tr>
+  <th>Lot Size</th>
+  <th>RSI Profit %</th>
+  <th>First Avg %</th>
+  <th>First Avg</th>
+  <th>Entry</th>
+  <th>Avg Price</th>
+  <th>RSI Target</th>
+  <th>Take Away Profit</th>
+  <th>First Avg Diff</th>
+  <th>Target Diff</th>
+</tr>
 
-<label>Price:</label>
-<input id="price" oninput="calculate()"><br><br>
+<tr>
+  <td class="input"><input id="lot" oninput="calc()"></td>
+  <td class="formula" id="rsiProfit"></td>
+  <td class="formula" id="firstAvgPercent"></td>
+  <td class="formula" id="firstAvg"></td>
+  <td class="formula" id="entry">1188</td>
+  <td class="formula" id="avgPrice"></td>
+  <td class="formula" id="rsiTarget"></td>
+  <td class="formula" id="takeProfit"></td>
+  <td class="output" id="avgDiff"></td>
+  <td class="output" id="targetDiff"></td>
+</tr>
 
-<h3>Results</h3>
-
-<p>Quantity: <span id="qty"></span></p>
-<p>Capital Used: <span id="capital"></span></p>
-<p>Risk Amount: <span id="riskAmt"></span></p>
-<p>Risk per Unit: <span id="riskPerUnit"></span></p>
-<p>Target Diff: <span id="target"></span></p>
+</table>
 
 <script>
-function calculate() {
-  let lot = Number(document.getElementById("lot").value);
-  let price = Number(document.getElementById("price").value);
+function calc() {
 
-  if (!lot || !price) return;
+  let B = Number(document.getElementById("lot").value); // Lot
+  let F = 1188; // Entry (static)
 
-  // ===== YOUR LOGIC (can be tuned exactly to Excel) =====
+  if (!B) return;
 
-  let qty = lot; // assuming 1 lot trade
-  let capital = qty * price;
+  // ===== Excel Logic Converted =====
 
-  let riskPercent = 1; // static (can change based on your sheet)
-  let riskAmt = capital * (riskPercent / 100);
+  // C2 = 3000 / (G2 * B2)
+  // but G2 depends on avg price, so calculate stepwise
 
-  let riskPerUnit = riskAmt / qty;
+  let D = -4000 / (F * B);   // First Avg %
+  let E = F * D + F;         // First Avg
 
-  let target = riskPerUnit * 0.75;
+  let G = (E + F) / 2;       // Avg Price
 
-  // ===== OUTPUT =====
+  let C = 3000 / (G * B);    // RSI Profit %
 
-  document.getElementById("qty").innerText = qty;
-  document.getElementById("capital").innerText = capital.toFixed(2);
-  document.getElementById("riskAmt").innerText = riskAmt.toFixed(2);
-  document.getElementById("riskPerUnit").innerText = riskPerUnit.toFixed(2);
-  document.getElementById("target").innerText = target.toFixed(2);
+  let H = (G * C) + G;       // RSI Target
+
+  let I = (H - F) * B;       // Take away profit
+
+  let J = E - F;             // First Avg Diff
+  let K = H - G;             // Target Diff
+
+  // ===== Display =====
+
+  document.getElementById("rsiProfit").innerText = C.toFixed(4);
+  document.getElementById("firstAvgPercent").innerText = D.toFixed(4);
+  document.getElementById("firstAvg").innerText = E.toFixed(2);
+  document.getElementById("avgPrice").innerText = G.toFixed(2);
+  document.getElementById("rsiTarget").innerText = H.toFixed(2);
+  document.getElementById("takeProfit").innerText = I.toFixed(2);
+  document.getElementById("avgDiff").innerText = J.toFixed(2);
+  document.getElementById("targetDiff").innerText = K.toFixed(2);
+
 }
 </script>
+
 </body>
 </html>
