@@ -88,12 +88,17 @@
 
 .output-item {
     background: linear-gradient(135deg, #064e3b, #022c22);
-    padding: 16px;
-    border-radius: 12px;
-    border: 1px solid rgba(34,197,94,0.3);
+    padding: 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(34,197,94,0.35);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: transform 0.15s ease;
+}
+
+.output-item:hover {
+    transform: translateY(-2px);
 }
 
 .output-item span {
@@ -103,20 +108,59 @@
 
 .output-item strong {
     color: #bbf7d0;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    font-weight: 600;
 }
 
 /* ================================
-   FOOTER NOTE
+   STRATEGY RULES (🔥 NEW UPGRADE)
+================================ */
+
+.calculator-rules {
+    margin-top: 24px;
+    padding: 18px 20px;
+    border-radius: 14px;
+    background: linear-gradient(180deg, #020617, #020617);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.calculator-rules li {
+    margin-bottom: 10px;
+    color: #e2e8f0;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 14px;
+}
+
+/* custom bullet */
+.calculator-rules li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #22d3ee;
+}
+
+/* nested list */
+.calculator-rules ul {
+    margin-top: 6px;
+    padding-left: 16px;
+}
+
+.calculator-rules ul li {
+    font-size: 0.88rem;
+    color: #94a3b8;
+}
+
+/* ================================
+   NOTE TEXT
 ================================ */
 
 .calculator-note {
-    margin-top: 24px;
-    padding-top: 14px;
+    margin-top: 20px;
     font-style: italic;
     font-size: 0.9rem;
     color: #9ca3af;
-    border-top: 1px dashed rgba(255,255,255,0.15);
 }
 
 /* ================================
