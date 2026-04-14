@@ -82,6 +82,11 @@
         <strong id="avgDiffOB">-</strong>
     </div>
 
+    <div class="output-item">
+        <span>Target after Avg</span>
+        <strong id="targetAvgPriceOB">-</strong>
+    </div>
+
 </div>
 
 <p class="calculator-note">
@@ -140,6 +145,8 @@ function calc() {
 
     let targetPriceOB = F + K; // Target Buy Back Price
     let avgPriceOB = F - J; // Target Buy Back Price
+    let targetAvgPriceOB = ( (F + avgPriceOB) / 2 ) + K; // Target Buy Back Price
+    
 
     // document.getElementById("avgDiff").innerText = J.toFixed(2);
     // document.getElementById("targetDiff").innerText = K.toFixed(2);
@@ -150,6 +157,7 @@ function calc() {
 
     document.getElementById("avgDiffOB").innerText = avgPriceOB.toFixed(2);
     document.getElementById("targetDiffOB").innerText = targetPriceOB.toFixed(2);
+    document.getElementById("targetAvgPriceOB").innerText = targetAvgPriceOB.toFixed(2);
 }
 </script>
 
