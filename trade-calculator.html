@@ -47,18 +47,34 @@
 
 </div>
 
-<h2>Final Output</h2>
+<h2>Final Output Option Selling</h2>
 
 <div class="output-box">
 
     <div class="output-item">
         <span>First Avg</span>
-        <strong id="avgDiff">-</strong>
+        <strong id="avgDiffOS">-</strong>
     </div>
 
     <div class="output-item">
         <span>Target</span>
-        <strong id="targetDiff">-</strong>
+        <strong id="targetDiffOS">-</strong>
+    </div>
+
+</div>
+
+<h2>Final Output Option Buying</h2>
+
+<div class="output-box">
+
+    <div class="output-item">
+        <span>First Avg</span>
+        <strong id="avgDiffOB">-</strong>
+    </div>
+
+    <div class="output-item">
+        <span>Target</span>
+        <strong id="targetDiffOB">-</strong>
     </div>
 
 </div>
@@ -113,14 +129,20 @@ function calc() {
     let J = E - F;   // First Avg Diff points
     let K = H - G;   // Target Diff points
 
-    let targetPrice = F - K; // Target Buy Back Price
-    let avgPrice = F + J; // Target Buy Back Price
+    let targetPriceOS = F - K; // Target Buy Back Price
+    let avgPriceOS = F + J; // Target Buy Back Price
+
+    let targetPriceOB = F + K; // Target Buy Back Price
+    let avgPriceOB = F - J; // Target Buy Back Price
 
     // document.getElementById("avgDiff").innerText = J.toFixed(2);
     // document.getElementById("targetDiff").innerText = K.toFixed(2);
 
-    document.getElementById("avgDiff").innerText = avgPrice.toFixed(2);
-    document.getElementById("targetDiff").innerText = targetPrice.toFixed(2);
+    document.getElementById("avgDiffOS").innerText = avgPriceOS.toFixed(2);
+    document.getElementById("targetDiffOS").innerText = targetPriceOS.toFixed(2);
+
+    document.getElementById("avgDiffOB").innerText = avgPriceOB.toFixed(2);
+    document.getElementById("targetDiffOB").innerText = targetPriceOB.toFixed(2);
 }
 </script>
 
