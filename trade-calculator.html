@@ -110,11 +110,17 @@ function calc() {
     let H = (G * C) + G;
     let I = (H - F) * B;
 
-    let J = E - F;   // First Avg Diff
-    let K = H - G;   // Target Diff
+    let J = E - F;   // First Avg Diff points
+    let K = H - G;   // Target Diff points
 
-    document.getElementById("avgDiff").innerText = J.toFixed(2);
-    document.getElementById("targetDiff").innerText = K.toFixed(2);
+    let targetPrice = F - K; // Target Buy Back Price
+    let avgPrice = F + J; // Target Buy Back Price
+
+    // document.getElementById("avgDiff").innerText = J.toFixed(2);
+    // document.getElementById("targetDiff").innerText = K.toFixed(2);
+
+    document.getElementById("avgDiff").innerText = avgPrice.toFixed(2);
+    document.getElementById("targetDiff").innerText = targetPrice.toFixed(2);
 }
 </script>
 
