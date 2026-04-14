@@ -61,6 +61,11 @@
         <strong id="avgDiffOS">-</strong>
     </div>
 
+    <div class="output-item">
+        <span>Target after Avg</span>
+        <strong id="targetAvgPriceOS">-</strong>
+    </div>
+
 </div>
 
 <h2>Final Output Option Buying</h2>
@@ -119,10 +124,10 @@ function calc() {
     if (!B || !F) return;
 
     // Excel logic (exact)
-    let D = 4000 / (F * B);
+    let D = 3000 / (F * B);
     let E = (F * D) + F;
     let G = (E + F) / 2;
-    let C = 3000 / (G * B);
+    let C = 2000 / (G * B);
     let H = (G * C) + G;
     let I = (H - F) * B;
 
@@ -131,6 +136,7 @@ function calc() {
 
     let targetPriceOS = F - K; // Target Buy Back Price
     let avgPriceOS = F + J; // Target Buy Back Price
+    let targetAvgPriceOS = ( (F + avgPriceOS) / 2 ) - K; // Target Buy Back Price
 
     let targetPriceOB = F + K; // Target Buy Back Price
     let avgPriceOB = F - J; // Target Buy Back Price
@@ -140,6 +146,7 @@ function calc() {
 
     document.getElementById("avgDiffOS").innerText = avgPriceOS.toFixed(2);
     document.getElementById("targetDiffOS").innerText = targetPriceOS.toFixed(2);
+    document.getElementById("targetAvgPriceOS").innerText = targetAvgPriceOS.toFixed(2);
 
     document.getElementById("avgDiffOB").innerText = avgPriceOB.toFixed(2);
     document.getElementById("targetDiffOB").innerText = targetPriceOB.toFixed(2);
