@@ -1,0 +1,107 @@
+/* =================================
+   BULL PUT SPREAD – DARK THEME
+================================= */
+
+/* Grid */
+.methods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 28px;
+    padding: 24px;
+}
+
+/* Card */
+.method-card {
+    background: linear-gradient(
+        180deg,
+        #0f172a,
+        #020617
+    );
+
+    border-radius: 16px;
+    padding: 26px 28px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.method-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 28px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* Headings */
+.method-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+    color: #e5e7eb;
+}
+
+.method-card h3 {
+    font-size: 1.05rem;
+    margin-top: 22px;
+    margin-bottom: 10px;
+    color: #c7d2fe;
+}
+
+/* Lists */
+.method-card ul {
+    padding-left: 18px;
+    margin: 10px 0 16px;
+}
+
+.method-card ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+    color: #d1d5db;
+}
+
+/* Prompt Section */
+.notes-section {
+    background: #020617;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    padding: 18px;
+    border-radius: 12px;
+
+    white-space: pre-line;
+
+    line-height: 1.7;
+    color: #d1d5db;
+
+    margin-top: 12px;
+}
+
+/* Accent Colors */
+.method-card:nth-child(1) h2 {
+    color: #22d3ee;
+}
+
+.method-card:nth-child(2) h2 {
+    color: #60a5fa;
+}
+
+.method-card:nth-child(3) h2 {
+    color: #fbbf24;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+
+    .methods-grid {
+        padding: 16px;
+        gap: 18px;
+    }
+
+    .method-card {
+        padding: 20px;
+    }
+}
