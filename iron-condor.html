@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Notes | Kunal Finance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="notes.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">📊 Kunal Finance</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="financial-roadmap.html">Financial Roadmap</a>
+            <a href="trade-evaluation.html">Trade Evaluation</a>
+            <a href="notes.html">Notes</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="scroll-area">
+            <section class="methods-grid">
+
+                <!-- ================= CARD 1 ================= -->
+                <div class="method-card">
+                    
+
+                    <h3>🧾 Final “GO / NO-GO” Checklist (As per Greeks)</h3>
+                    <a href="greek-lab.html">Greeks Lab</a>
+
+                    <h3>✅ Iron Condor GO Checklist</h3>
+                    <p><b>Trade only if ALL conditions met:</b></p>
+                    <ul>
+                        <li>POP ≥ 65%</li>
+                        <li>Short strike delta between 0.18 – 0.22</li>
+                        <li>Portfolio Delta between -20 to +20</li>
+                        <li>Portfolio Theta ≥ 20</li>
+                        <li>Portfolio Gamma low (ideally &lt; 1)</li>
+                        <li>Portfolio Vega negative</li>
+                        <li>IV Percentile &lt; 90 (reduce position size if higher)</li>
+                        <li>Credit ≥ 30% of spread width</li>
+                        <li>Price between short strikes (not wings)</li>
+                    </ul>
+
+                    <h3>⚠️ Iron Condor ADJUST Checklist</h3>
+                    <p><b>Adjust if ANY condition appears:</b></p>
+                    <ul>
+                        <li>Short strike delta ≥ 0.33</li>
+                        <li>Delta imbalance greater than 3×</li>
+                        <li>Price within one spread of short strike</li>
+                        <li>Loss reaches 75% of credit received</li>
+                        <li>IV expanding rapidly</li>
+                    </ul>
+
+                    <h3>🚪 Iron Condor EXIT Checklist</h3>
+                    <p><b>Exit if ANY condition occurs:</b></p>
+                    <ul>
+                        <li>50–60% profit reached</li>
+                        <li>Risk increasing (Gamma rising or Delta drifting)</li>
+                        <li>Days to expiry below 5–7 (last week risk)</li>
+                    </ul>
+
+                    <h4>⚠️ Iron Fly — Allowed Only If</h4>
+                    <ul>
+                        <li>Delta between -10 to +10</li>
+                        <li>Theta ≥ 60</li>
+                        <li>Gamma &lt; 3</li>
+                        <li>Strongly negative Vega</li>
+                        <li>Price very close to ATM</li>
+                        <li>Ability to monitor / adjust</li>
+                    </ul>
+
+                    <h3>Execution Prompt</h3>
+
+                    <div class="notes-section">
+Act as a professional options risk manager and analyse this option chain using my saved options selling framework.
+Follow these rules strictly:
+Iron Condor entry rules:
+•	Short strike delta between 0.18–0.22 
+•	Portfolio delta between −20 to +20 
+•	Theta ≥ 20 
+•	Gamma low 
+•	Vega negative 
+•	POP ≥ 65% preferred 
+•	Credit ≥ 30% of spread width 
+•	Wing width ≈ 1.2–1.5× expected move 
+•	IV percentile consideration (reduce size if >90) 
+Structure rules:
+•	Identify whether condor is neutral or directional 
+•	If directional, justify using probability/Greeks 
+Iron Fly comparison:
+Check if Iron Fly is superior using:
+•	Delta −10 to +10 
+•	Theta ≥60 
+•	Gamma <3 
+•	Strong negative Vega 
+Risk evaluation:
+Provide:
+•	Probability of profit assessment 
+•	Break-even levels 
+•	Risk reward quality 
+•	Margin efficiency 
+Adjustment planning (very important):
+Identify:
+•	Delta danger levels (0.30 and 0.35 triggers) 
+•	Price levels requiring adjustment 
+•	When rolling is better 
+•	When fly conversion is better 
+•	When averaging is allowed 
+Decision output format:
+Give final verdict:
+Trade Quality:
+(A grade / B grade / C grade / Reject)
+Suggested structure:
+•	Sell strikes: 
+•	Buy wings: 
+Greeks assessment:
+•	Portfolio Delta: 
+•	Theta: 
+•	Gamma: 
+•	Vega: 
+Probability assessment:
+Risk type:
+(Conservative / Standard / Aggressive)
+Adjustment triggers:
+Best alternative (if current structure not optimal):
+Most important risk:
+Final decision:
+Trade / Avoid / Wait
+Reject any trade that violates my Greeks rules.
+
+
+                       
+                    </div>
+
+                    <h3>Adjustment Prompt (Old)</h3>
+                    <p>
+                        <code>
+                                    Spot price = ___
+                                    Short CE delta = ___
+                                    Short PE delta = ___
+                                    Delta imbalance = ___
+                                    IV percentile = ___
+                                    Current P/L = ___
+                                    Initial credit = ___
+                                    Distance to short strike = ___
+                                
+                                    Check if adjustment is needed based on my Iron Condor adjustment rules and which adjustment type applies.
+                                </code>
+                    </p>
+
+                    
+
+                    <p class="method-note">
+                        Philosophy: Cash generation is capped, controlled, and rule-based.
+                    </p>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        © 2025 Kunal Finance. All rights reserved.
+    </footer>
+
+</body>
+
+</html>
