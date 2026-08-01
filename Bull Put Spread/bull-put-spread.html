@@ -6,14 +6,11 @@
 <title>Bull Put Spread | Kunal Finance</title>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../css/common.css" rel="stylesheet"/>
-<link href="bull-put-spread.css" rel="stylesheet"/>
-<script>function copyPrompt1() {
-const content = document.getElementById("prompt1").innerText
-      .replace("Copy", "") // removes button textnavigator.clipboard.writeText(content.trim());
+<link href="bull-put-spread.css" rel="stylesheet"/><script>function copyPrompt1() {
+const content = document.getElementById("prompt1").innerText.replace("Copy", "") // removes button textnavigator.clipboard.writeText(content.trim());
 }
 function copyPrompt2() {
-const content = document.getElementById("prompt2").innerText
-      .replace("Copy", "") // removes button textnavigator.clipboard.writeText(content.trim());
+const content = document.getElementById("prompt2").innerText.replace("Copy", "") // removes button textnavigator.clipboard.writeText(content.trim());
 }
 function copyPrompt3() {
 const content = document.getElementById("prompt3").innerText
@@ -33,7 +30,18 @@ const content = document.getElementById("prompt3").innerText
 </nav>
 </header>
 <main>
-  <div class="scroll-area"><section class="methods-grid"><div class="method-card"><h2>1️⃣ Future Section</h2><h3>Reserved for future updates</h3><div class="notes-section"><p style="opacity : .75;">This section is intentionally left blank. Add future Bull Put Spread notes, strategies, checklists or prompts here.</p></div></div><div class="method-card">
+  <div class="scroll-area"><section class="methods-grid"><div class="method-card">
+        <h2>1️⃣ Future Section</h2>
+          <h3>Reserved for future updates</h3><div class="notes-section"><p style="opacity :.75;">
+            <ul><li><strong>Position Size : </strong> Maximum <strong>3 lots</strong> per Bull Put Spread.</li><li><strong>Entry : </strong> Enter only when <strong>RSI is between 30–39</strong>.</li><li><strong>Averaging : </strong> Average only when option premium reaches <strong>2.5×</strong> the original premium using <strong>3 additional lots</strong>.</li><li><strong>Average Exit : </strong> Exit the averaging position after capturing <strong>50–60% profit</strong>. Continue holding the original position.</li><li><strong>Profit Booking : </strong> Exit profitable positions during the <strong>2nd last week</strong> before expiry.</li><li><strong>Fallback Exit : </strong> If not exited, close in the <strong>expiry week (latest by Thursday)</strong>.</li><li><strong>New Positions : </strong> Open fresh positions only in the <strong>last week</strong> of the expiry cycle.</li><li><strong>Roll Over : </strong> Roll over only <strong>loss-making positions</strong> with the <strong>same strike</strong> and <strong>same 3 lots</strong>. Close the old position before opening the new one.</li><li><strong>Event Filter : </strong> Avoid taking positions before major events (Results, RBI Policy, Budget, etc.).</li>
+
+</ul>
+
+This format is cleaner, takes about half the vertical space, and is easier to follow as a quick-reference checklist.    
+        </p>
+        </div>
+  </div>
+        <div class="method-card">
 <h2>2️⃣ Bull Put Spread Guide</h2>
 <h3>Points to be noted BefInvestment taken</h3>
 <ul>
@@ -83,8 +91,7 @@ const content = document.getElementById("prompt3").innerText
                         </li>
 </ul>
 <h3>Short Put Selection Rules</h3>
-<ul>
-  <li>Prioritize survivability over premium collection</li><li>Preferred short put delta range : 0.15–0.22</li>
+  <ul><li>Prioritize survivability over premium collection</li><li>Preferred short put delta range :0.15–0.22</li>
 <li>Prefer far OTM strikes</li>
 <li>
                             Maintain 5–8% safety buffer from spot during high IV conditions
@@ -92,8 +99,7 @@ const content = document.getElementById("prompt3").innerText
 <li>Avoid aggressive directional positioning</li>
 </ul>
 <h3>Hedge (Long Put) Selection Rules</h3>
-<ul>
-  <li>Buy further OTM protective put</li><li>Preferred hedge delta range : 0.03–0.10</li><li>Hedge exists for : </li>
+  <ul><li>Buy further OTM protective put</li><li>Preferred hedge delta range : 0.03–0.10</li><li>Hedge exists for :</li>
 <ul>
 <li>tail-risk protection</li>
 <li>defined risk</li>
@@ -112,13 +118,11 @@ const content = document.getElementById("prompt3").innerText
                         </li>
 </ul>
 <h3>POP &amp; Probability Rules</h3>
-<ul>
-  <li>Prefer high probability setups</li><li>Target POP : preferably &gt;
+  <ul><li>Prefer high probability setups</li><li>Target POP :preferably &gt;
 70%</li>
 <li>Favor consistency over high reward</li>
 </ul>
-<h3>Entry Rules</h3>
-  <ul><li>Enter only when : </li>
+  <h3>Entry Rules</h3><ul><li>Enter only when :</li>
 <ul>
 <li>price remains above support</li>
 <li>institutional Put support remains intact</li>
@@ -130,8 +134,7 @@ const content = document.getElementById("prompt3").innerText
 <li>Use controlled/small position sizing</li>
 <li>Max loss per Investment should remain manageable</li>
 </ul>
-<h3>Exit &amp; Profit Booking Rules</h3>
-  <ul><li>Book profits at : </li>
+  <h3>Exit &amp; Profit Booking Rules</h3><ul><li>Book profits at :</li>
 <ul>
 <li>50–60% of maximum profit</li>
 </ul>
@@ -140,8 +143,7 @@ const content = document.getElementById("prompt3").innerText
                             Prioritize smooth equity curve over maximizing final decay
                         </li>
 </ul>
-<h3>Defensive / Exit Triggers</h3>
-  <ul><li>Exit or defend if : </li>
+  <h3>Defensive / Exit Triggers</h3><ul><li>Exit or defend if :</li>
 <ul>
 <li>short put delta expands above 0.30</li>
 <li>major support breaks</li>
@@ -167,22 +169,18 @@ const content = document.getElementById("prompt3").innerText
 <h2>4️⃣ New Trade Analysis Prompt</h2>
 <h3>Prompt</h3>
 <div class="notes-section" id="prompt1">
-<button class="copy-btn" onclick="copyPrompt1()">Copy</button>
-
-  Analyse the attached option-chain and Greeks screenshots for this stock and determine the SAFEST professional Bull Put Spread strategy based on my saved safety-first framework.Focus on : * strongest Put OI support
+  <button class="copy-btn" onclick="copyPrompt1()">Copy</button>Analyse the attached option-chain and Greeks screenshots for this stock and determine the SAFEST professional Bull Put Spread strategy based on my saved safety-first framework.Focus on :* strongest Put OI support
 * conservative delta selection
 * low gamma risk
 * high probability setup
-* minimal adjustment probability
-  * capital preservation over premiumShare : 1. Best strike to sell and why
+  * minimal adjustment probability* capital preservation over premiumShare :1. Best strike to sell and why
 2. Best strike to buy and why
 3. POP
 4. Max profit
 5. Max loss
 6. Risk-reward
 7. Greeks analysis
-8. OI analysis
-  9. Exit/defensive trigger levels10. Final recommendation : * Aggressive
+  8. OI analysis9. Exit/defensive trigger levels10. Final recommendation :* Aggressive
 * Balanced
 * Conservative
 * Ultra Conservative
@@ -194,15 +192,12 @@ provide me a tabular output always - Strikes to buy and sell Max loss and Profit
 <h2>5️⃣ Existing Trade Analysis</h2>
 <h3>Prompt to analyze my existing BPS</h3>
 <div class="notes-section" id="prompt2">
-<button class="copy-btn" onclick="copyPrompt2()">Copy</button>
-                          I have shared screenshot(s) of an existing Bull Put Spread position along with option chain / Greeks data.Act as a professional options risk manager and analyze the position using my saved conservative Bull Put Spread framework focused on : * capital preservation
+  <button class="copy-btn" onclick="copyPrompt2()">Copy</button>I have shared screenshot(s) of an existing Bull Put Spread position along with option chain / Greeks data.Act as a professional options risk manager and analyze the position using my saved conservative Bull Put Spread framework focused on :* capital preservation
 * high probability
 * low gamma risk
 * minimal adjustments
-* strong OI support
-  * conservative delta managementPlease determine whether the position currently falls under : 1. Healthy Pullback (Usually Safe)
-2. Pressure Zone (Monitor Closely)
-  3. Structural Breakdown (Danger)From the screenshots, extract and analyze : * underlying stock price
+  * strong OI support* conservative delta managementPlease determine whether the position currently falls under :1. Healthy Pullback (Usually Safe)
+  2. Pressure Zone (Monitor Closely)3. Structural Breakdown (Danger)From the screenshots, extract and analyze :* underlying stock price
 * sold put strike and bought put strike
 * short-leg Greeks (Delta, Gamma, Theta, Vega)
 * IV / IV percentile (if visible)
@@ -212,19 +207,16 @@ provide me a tabular output always - Strikes to buy and sell Max loss and Profit
 * trend strength and momentum
 * days to expiry
 * probability of recovery
-* gamma risk escalation
-  * whether theta can still help recoveryThen provide : 1. Current trade classification (Healthy Pullback / Pressure Zone / Structural Breakdown)
+  * gamma risk escalation* whether theta can still help recoveryThen provide :1. Current trade classification (Healthy Pullback / Pressure Zone / Structural Breakdown)
 2. Why the trade falls into that category
-3. Whether the current support structure is still safe
-  4. Whether the trade can still recover naturally5. Whether to : * hold
+  3. Whether the current support structure is still safe4. Whether the trade can still recover naturally5. Whether to :* hold
    * reduce position
    * roll down-and-out
    * hedge temporarily
    * convert to Iron Condor
    * or exit
 6. Safest professional action according to my conservative framework
-7. Exact adjustment plan if adjustment is required
-  8. Key warning signs to monitor nextImportant : * prioritize survivability over aggressive premium collection
+  7. Exact adjustment plan if adjustment is required8. Key warning signs to monitor nextImportant :* prioritize survivability over aggressive premium collection
 * avoid emotional adjustments
 * focus on probability, Greeks, OI structure, and risk control
 * if no adjustment is needed, clearly explain why patience is better
@@ -236,9 +228,7 @@ provide me a tabular output always - Strikes to buy and sell Max loss and Profit
 <h2>6️⃣ Support &amp; Probability Analysis</h2>
 <h3>Prompt to analyze till where can the stock fall</h3>
 <div class="notes-section" id="prompt3">
-<button class="copy-btn" onclick="copyPrompt3()">Copy</button>
-                       
-  Analyse the attached option-chain, Greeks, OI and chart screenshots for this stock using my saved Safety-First Bull Put Spread Framework.Perform ALL of the following : 1. Delta Probability Analysis
+  <button class="copy-btn" onclick="copyPrompt3()">Copy</button>Analyse the attached option-chain, Greeks, OI and chart screenshots for this stock using my saved Safety-First Bull Put Spread Framework.Perform ALL of the following :1. Delta Probability Analysis
 
 * Probability of expiring above short strike
 * Probability of expiring below short strike
@@ -263,24 +253,17 @@ provide me a tabular output always - Strikes to buy and sell Max loss and Profit
 * PCR
 * Max Pain
 * OI Buildup
-* Bullish/Bearish assessment
-
-  5. Framework ValidationCheck : * Short Delta 0.15–0.22
+  * Bullish/Bearish assessment5. Framework ValidationCheck :* Short Delta 0.15–0.22
 * Strong Put OI support
 * High probability setup
 * Low Gamma risk
 * Capital preservation
-* Low adjustment probability
-
-  6. Probability TableProvide probabilities for : * Expire above short strike
+  * Low adjustment probability6. Probability TableProvide probabilities for :* Expire above short strike
 * Expire below short strike
 * Touch short strike
 * Break major support
-* Max profit outcome
-
-  7. Trade RecommendationRank : 🥇 Best Bull Put Spread
-   🥈 Second Best
-     🥉 Aggressive AlternativeProvide : * Short strike
+  * Max profit outcome7. Trade RecommendationRank :🥇 Best Bull Put Spread
+     🥈 Second Best🥉 Aggressive AlternativeProvide :* Short strike
 * Long strike
 * Credit
 * Risk
