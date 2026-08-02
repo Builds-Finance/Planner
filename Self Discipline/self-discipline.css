@@ -157,3 +157,53 @@ border-radius:12px;
 box-shadow:
 0 25px 60px rgba(0,0,0,0.6);
 }
+
+/* ===========================
+   FITNESS TWO COLUMN LAYOUT
+=========================== */
+
+.fitness-grid{
+    display:grid;
+    grid-template-columns:420px 1fr;
+    gap:35px;
+    align-items:start;
+}
+
+.fitness-left h2{
+    margin-bottom:18px;
+}
+
+.fitness-left .discipline-row{
+    grid-template-columns:120px 1fr;
+}
+
+.fitness-right{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+.fitness-image{
+    margin-top:0;
+    width:100%;
+}
+
+.fitness-image img{
+    width:100%;
+    max-width:700px;
+    border-radius:14px;
+}
+
+/* Mobile */
+
+@media (max-width:900px){
+
+    .fitness-grid{
+        grid-template-columns:1fr;
+    }
+
+    .fitness-right{
+        margin-top:25px;
+    }
+
+}
